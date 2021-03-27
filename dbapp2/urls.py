@@ -5,5 +5,6 @@ from dbapp2 import views
 urlpatterns={
     path('', views.index,name='index'),
     path('admin/',admin.site.urls),
-    path('signup',views.signup,name='signup')
+    path('signup',views.signup,name='signup'),
+    path('contact', views.contact,name='contact'),
 }
