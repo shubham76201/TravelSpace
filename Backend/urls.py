@@ -22,10 +22,12 @@ admin.site.index_title = 'Welcome To Shubhams Shoppe Admin Panel'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", include('home.urls')),
+    path("index", include('home.urls')),
     path("about",include('home.urls')),
     path("service",include('home.urls')),
     path("contact",include('home.urls')),
+    path("",include('frontapp.urls')),
     path("dbapp2/",include('dbapp2.urls')),
+    
 ]
 
