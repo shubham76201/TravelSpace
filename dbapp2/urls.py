@@ -7,4 +7,5 @@ urlpatterns={
     path('admin/',admin.site.urls),
     path('signup',views.signup,name='signup'),
     path('contact', views.contact,name='contact'),
+    path('hotel', views.hotel,name='hotel'),
 }

@@ -20,7 +20,7 @@ def signup(request):
 
 def index(request):
     return render(request, 'index.html')
-    
+
 def contact(request):
     if request.method == "POST":
         name= request.POST.get('name')
@@ -31,3 +31,6 @@ def contact(request):
         contact.save()
         messages.success(request, ' Profile details updated.')
     return render(request,'contact.html')
+
+def hotel(request):
+    return render(request, 'hotel.html')
