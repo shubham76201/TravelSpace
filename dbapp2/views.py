@@ -33,4 +33,4 @@ def contact(request):
     return render(request,'contact.html')
 
 def hotel(request):
-    return render(request, 'hotel.html')
+    return render(request, 'LandingPage.html')
