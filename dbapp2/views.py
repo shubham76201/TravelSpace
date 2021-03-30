@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from dbapp2.models import Signup
 from django.contrib.auth.models import User
+import requests
+import json
 # Create your views here.
 def signup(request):
     if request.method=="POST":
@@ -34,3 +36,20 @@ def contact(request):
 
 def hotel(request):
     return render(request, 'hotel.html')
+
+def train(request):
+    url = "https://trains.p.rapidapi.com/"
+
+    payload = "{\r\"search\": \"Rajdhani\"\r}"
+    headers = {
+        'content-type': "application/json",
+        'x-rapidapi-key': "aed6b86374mshef490530de895fcp135547jsnb0954a5a6d1b",
+        'x-rapidapi-host': "trains.p.rapidapi.com"
+        }
+
+    response = requests.request("POST", url, data=payload, headers=headers)
+
+    y=json.loads(response.text)
+    print(y[0]['train_num'])
+
+    return render(request,'train.html', context={'temp' : y[0]['train_num'], 'temp2': ['a','b','c']})

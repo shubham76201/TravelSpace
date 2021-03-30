@@ -46,6 +46,7 @@ accommodation details and when clicked on (Book button) redirects to payment gat
 •	Processing: Check all the Flights or Trains available as per the User Input. If available Shows the list of Train or flights and if not Generates and error message.
 •	Output: Displays the list of trains or flight available with its fare.
 After clicking on (Book Button) redirects to the payment gateway.
+
 (vi) Payment Gateway
 •	Description: Payment methods available.
 •	Input: Payment via Third-Party-Apps (Paytm, Gpay). Or through Credit Card (Requires CVV and expiry date)

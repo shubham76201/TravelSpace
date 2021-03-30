@@ -9,4 +9,5 @@ urlpatterns={
     path('contact', views.contact,name='contact'),
     path('hotel', views.hotel,name='hotel'),
     path('index', views.index,name='index'),
+    path('train', views.train,name='train'),
 }
