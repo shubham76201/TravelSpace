@@ -6,12 +6,13 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width = device-width, initial-scale = 1.0">
         
-      <link rel= "stylesheet" href = "https://www.w3schools.com/w3css/4/w3.css">
-      <link rel= "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <link rel= "stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <link rel= "stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
       <style>
 
         .body{
@@ -23,21 +24,80 @@
           text-align: center;
         }
 
-        .text-input{
-          border: 0px;
-          outline: 0;
-          padding: 16px;
-          color: #000;
-          font-weight: bold;
-          width: 100%;
-          border-bottom: 1px solid #eff3ff8;
-        }
-
         .w3-border{
           border: 0px;
           outline: 0px;
         }
+
+        .container{
+          box-shadow:  0px 8px 8px rgba(75, 75, 75, 0.534);
+          position: relative;
+        }
+
+        .col{
+          box-shadow:  0px 8px 8px rgba(75, 75, 75, 0.534);
+          padding: 20px;
+        }
+
+        .card-title{
+          font-weight: bold;
+
+        }
+
+        .card-text{
+          color: grey;
+        }
+
+        hr{
+          height: 1px;
+          margin-right: 250px;
+          background-color: red;
+        }
+
+        .card-img-top {
+          width: 100%;
+          height: 15vw;
+          object-fit: cover;
+        }
+
+        .break{
+          height: 0.5px;
+          background-color: grey;
+          margin: 40px 250px 40px 250px ;
+        }
+
+        .row-p{
+          flex-wrap: nowrap;
+          display: flex;
+          margin-left: 12px;
+          margin-right: 12px;
+          
+          
+        }
+        .col-4{
+          position: relative;
+          float: left;
+          box-sizing: border-box;
+          margin-right: 70px;
+          padding-left: 200px;
+          min-height: 1px;
+        }
         
+        .flex-container{
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: center;
+        }
+
+        .flex-item{
+          margin: 20px;
+        }
+
+        .img-responsive{
+          width: 85px;
+          height: 55px;
+        }
+       
       </style>
 
 
@@ -45,7 +105,7 @@
 
 
 
-  <body class="w3-light-grey">
+  <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-black">
       <div class="container-fluid">
         <a class="navbar-brand new1" href="#">Travel Space</a>
@@ -67,7 +127,7 @@
                 Travel Mode
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Train</a></li>
+                <li><a class="dropdown-item" href="templates/train.html">Train</a></li>
                 <li><a class="dropdown-item" href="#">Bus</a></li>
                 <li><a class="dropdown-item" href="#">Flight</a></li>
                 <li><a class="dropdown-item" href="#">Cab</a></li>
@@ -77,7 +137,7 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link " href="#" tabindex="-1" aria-disabled="true"><b>Hotels</b></a>
+              <a class="nav-link " href="templates/hotel.html" tabindex="-1" aria-disabled="true"><b>Hotels</b></a>
             </li>
             <li class="nav-item">
               <a class="nav-link " href="dbapp2/contact" tabindex="-1" aria-disabled="true">Contact Us</a>
@@ -134,15 +194,87 @@
     </div>
   </header>
   <br />
-  <div class= "container-md">
-    <div class="card" style="width:18rem;">
-      <div class="card-body">
-      <h5 class="card-title">Special offers</h5>
-        
+
+  <div class="container"> 
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card">
+          <img src="https://c.files.bbci.co.uk/F76E/production/_115224336_mediaitem115224335.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Book Confirmed Train Tickets </h5><hr>
+            <p class="card-text">with the Nearby Station features! Get live PNR status updates,enjoy easy cancellation & more</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://media.kasperskydaily.com/wp-content/uploads/sites/92/2015/12/06023356/train-hack-featured-1.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Enjoy Zero Service Fees on Train Bookings!</h5><hr>
+            <p class="card-text">Save big, Travel more.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://imgeng.jagran.com/images/2020/mar/trainrail1584724002639.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">List of Cancelled Traing by Indian Railway</h5><hr>
+            <p class="card-text">Click to check now, plan better, plan smart.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+  <br />
+
+  <hr class="break">
+
+  
+  <div class="row-p">
+    <div class="col-4">
+      <h2 style="margin-bottom: 24px; font-weight: bold;">Payment Partners</h2>
+      <p>We are partnering with the most reliable payment service providers to make sure every transaction is smooth and worry-free!</p>
+    </div>
+    <div class="flex-container">
+      <div class="flex-item">
+        <a href=#><img src="https://www.noticebard.com/wp-content/uploads/2018/02/paytm-customer-care-internship-Delhi.png" alt="paytm" class="img-responsive"></a>
+      </div>
+      <div class="flex-item">
+        <a href=#><img src="https://www.visionbanks.com/wp-content/uploads/gpay_logo.png" alt="Gpay" class="img-responsive"></a>
+      </div>
+      <div class="flex-item">
+        <a href=#><img src="https://cdn0.iconfinder.com/data/icons/flat-design-business-set-3/24/payment-method-visa-512.png" alt="visa" class="img-responsive"></a>
+      </div>
+      <div class="flex-item">
+        <a href=#><img src="https://cdn.iconscout.com/icon/free/png-512/mastercard-10-226450.png" alt="mc" class="img-responsive"></a>
+      </div>
+      <div class="flex-item">
+        <a href=#><img src="https://i.dlpng.com/static/png/487169_preview.png" alt="paypal" class="img-responsive"></a>
+      </div>
+      <div class="flex-item">
+          <a href=#><img src="https://sutrashome.files.wordpress.com/2019/04/bhim.jpg" alt="upi" class="img-responsive"></a>
+      </div>
+    </div>
+  </div>
+  
+  <hr class="break">
+
+  <h2>FAQ's<h2>
 
 
+  <footer class="w3-padding-32 w3-black w3-center w3-margin-top">
+    <div class="w3-xlarge w3-padding-16">
+      <i class="fa fa-facebook-official w3-hover-opacity"></i>
+      <i class="fa fa-instagram w3-hover-opacity"></i>
+      <i class="fa fa-snapchat w3-hover-opacity"></i>
+      <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+      <i class="fa fa-twitter w3-hover-opacity"></i>
+      <i class="fa fa-linkedin w3-hover-opacity"></i>
+    </div>
+  </footer> 
+  
+  
 
     <script> 
       function myFunction() {
