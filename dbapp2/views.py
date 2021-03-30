@@ -37,7 +37,7 @@ def contact(request):
 def hotel(request):
     return render(request, 'hotel.html')
 
-def train(request):
+def train1(request):
     url = "https://trains.p.rapidapi.com/"
 
     payload = "{\r\"search\": \"Rajdhani\"\r}"
@@ -52,4 +52,7 @@ def train(request):
     y=json.loads(response.text)
     print(y[0]['train_num'])
 
-    return render(request,'train1.html', context={'temp' : y[0]['train_num'], 'temp2': ['a','b','c']})
+    return render(request,'train1.html', context={'temp' : y[4]['name'], 'temp2': ['a','b','c']})
+
+def train(request):
+    return render(request, 'train.html')
