@@ -52,4 +52,4 @@ def train(request):
     y=json.loads(response.text)
     print(y[0]['train_num'])
 
-    return render(request,'train.html', context={'temp' : y[0]['train_num'], 'temp2': ['a','b','c']})
+    return render(request,'train1.html', context={'temp' : y[0]['train_num'], 'temp2': ['a','b','c']})

@@ -54,5 +54,7 @@ After clicking on (Book Button) redirects to the payment gateway.
 •	Output: A message with payment Successful/failed appears.
 
 
+# Wireframe for project
+
 ![pic2](https://user-images.githubusercontent.com/65865851/112747982-8f025480-8fd6-11eb-85a7-965f5fec7440.png)
 
