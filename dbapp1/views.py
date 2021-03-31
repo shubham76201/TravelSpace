@@ -11,7 +11,8 @@ def signin(request):
       if s is None:
           return redirect('signin')
       else:
-          return redirect('/')
+        #   return redirect('/')
+          return render(request,'LandingPage.html', context={'temp4' : username1})
     else:
          return render(request,'index.html')
 

@@ -74,10 +74,15 @@
                                     <li>
                                         <a href="dbapp2/train">Train</a>
                                     </li>
+                                    {% if user.is_authenticated %}
                                     <li>
-                                        <a href="dbapp1/signin"><button class="book-btn">Login
-                                        </button></a>
+                                        <a href="dbapp3/logout"><button class="book-btn">Logout</button></a>
                                     </li>
+                                    {% else %}
+                                    <li>
+                                        <a href="dbapp1/signin"><button class="book-btn">Login</button></a>
+                                    </li>
+                                    {% endif %}
                                 </ul>
                             </div>
                         </div>
