@@ -1,8 +1,9 @@
+{% load static %}
 <!DOCTYPE html>
 
 <html>
   <head>
-    <title></title>
+    <title>Travel Space | Train</title>
       <meta charset="UTF-8">
       <meta name="viewport" content="width = device-width, initial-scale = 1.0">
         
@@ -12,6 +13,8 @@
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <link rel="shortcut icon" type="image/icon" href="{% static 'assets/logo/favicon.png' %}" />
+
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
       <style>
 
@@ -168,7 +171,7 @@
   </nav>
 
   <header class="w3-display-container w3-content" style="max-width:1500px;">
-    <img class="w3-image"  src="C:\Users\hriti\OneDrive\Documents\GitHub\TravelSpace\static\gallary\tomas-anton-escobar-PHyF2mCMei0-unsplash.jpg"
+    <img class="w3-image"  src="{% static 'gallary/n1.jpg' %}"
       alt="The Hotel" style="min-width:1000px; border-radius: 6px;" >
     <div class="w3-display-left w3-padding w3-col l6 m8">
       <div class="w3-container w3-red">

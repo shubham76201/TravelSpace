@@ -16,9 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-admin.site.site_header = 'Shubham Shop Admin'
-admin.site.site_title = 'Shubham Shop Admin Panel'
-admin.site.index_title = 'Welcome To Shubhams Shoppe Admin Panel'
+admin.site.site_header = 'Travel Space Admin'
+admin.site.site_title = 'Travel Space Admin Panel'
+admin.site.index_title = 'Welcome To Travel Space Admin Panel'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,6 +28,6 @@ urlpatterns = [
     path("contact",include('home.urls')),
     path("",include('frontapp.urls')),
     path("dbapp2/",include('dbapp2.urls')),
-    
+    path("dbapp1/",include('dbapp1.urls')),
 ]
 

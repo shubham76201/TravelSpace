@@ -1,26 +1,22 @@
+{% load static %}
 <!doctype html>
 <html class="no-js" lang="en">
 
 <head>
-    <!-- META DATA -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
     <!--font-family-->
     <link href="https://fonts.googleapis.com/css?family=Rufina:400,700" rel="stylesheet" />
-
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
-
     <!-- TITLE OF SITE -->
-    <title>Travel Space</title>
-
+    <title>TravelSpace</title>
     <!-- favicon img -->
-    <link rel="shortcut icon" type="image/icon" href="" />
-
-
+    <link rel="shortcut icon" type="image/icon" href="{% static 'assets/logo/Logo.jpg' %}" />
+    <!--font-awesome.min.css-->
+    <link rel="stylesheet" href="{% static 'assets/css/font-awesome.min.css' %}" />
     <!--animate.css-->
+<<<<<<< HEAD
     <style>
         @charset "UTF-8";
 
@@ -220,13 +216,235 @@
     -webkit-transform: scaleX(1.25) scaleY(0.75);
 
     transform: scaleX(1.25) scaleY(0.75);
+=======
+    <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}" />
+    <!--hover.css-->
+    <link rel="stylesheet" href="{% static 'assets/css/hover-min.css' %}">
+    <!--datepicker.css-->
+    <link rel="stylesheet" href="{% static 'assets/css/datepicker.css' %}">
+    <!--owl.carousel.css-->
+    <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/owl.theme.default.min.css' %}" />
+    <!-- range css-->
+    <link rel="stylesheet" href="{% static 'assets/css/jquery-ui.min.css' %}" />
+    <!--bootstrap.min.css-->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}" />
+    <!-- bootsnav -->
+    <link rel="stylesheet" href="{% static 'assets/css/bootsnav.css' %}" />
+    <!--style.css-->
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
+    <!--responsive.css-->
+    <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}" />
+</head>
+>>>>>>> 715f383426c310f6e5489f4bd8daa62d421d4e97
 
-  }
+<body>
+    <!-- main-menu Start -->
+    <header class="top-area">
+        <div class="header-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="logo">
+                            <a href="index.html">
+								Travel<span>Space</span>
+							</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-10">
+                        <div class="main-menu">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+									<i class="fa fa-bars"></i>
+								</button>
+                            </div>
+                            <!-- /.navbar-header-->
+                            <div class="collapse navbar-collapse">
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li>
+                                        <a href="/">home</a>
+                                    </li>
+                                    <li>
+                                        <a href="#gallery">Destination</a>
+                                    </li>
+                                    <li>
+                                        <a href="#pack">Packages </a>
+                                    </li>
+                                    <li>
+                                        <a href="dbapp2/hotel">Hotel</a>
+                                    </li>
+                                    <li>
+                                        <a href="dbapp2/train">Train</a>
+                                    </li>
+                                    <li>
+                                        <a href="dbapp1/signin"><button class="book-btn">Login
+                                        </button></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="home-border"></div>
+            </div>
+        </div>
+    </header>
+    <!-- main-menu End -->
 
+    <!--about-us start -->
+    <section id="home" class="about-us">
+        <div class="container">
+            <div class="about-us-content">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="single-about-us">
+                            <div class="about-us-txt">
+                                <h2>
+                                    Explore the Beauty of our country INDIA
+                                </h2>
+                                <div class="about-btn">
+                                    <button class="about-view">
+											explore now
+									</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-0">
+                        <div class="single-about-us"> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--about-us end -->
 
+    <!--travel-box start-->
+    <section class="travel-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="single-travel-boxes">
+                        <div id="desc-tabs" class="desc-tabs">
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#tours" aria-controls="tours" role="tab" data-toggle="tab">
+                                        <i class="fa fa-suitcase"></i> tours
+                                    </a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#hotels" aria-controls="hotels" role="tab" data-toggle="tab">
+                                        <i class="fa fa-building"></i> hotels
+                                    </a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#flights" aria-controls="flights" role="tab" data-toggle="tab">
+                                        <i class="fa fa-plane"></i> flights
+                                    </a>
+                                </li>
+                            </ul>
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active fade in" id="tours">
+                                    <div class="tab-para">
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4 col-sm-12">
+                                                <div class="single-tab-select-box">
+                                                    <h2>destination</h2>
+                                                    <div class="travel-select-icon">
+                                                        <select class="form-control ">
+															  	<option value="default">enter your destination state</option> 
+															  	<option value="Punjab">Punjab</option>
+															  	<option value="Rajasthan">Rajasthan</option>
+															  	<option value="Maharashtra">Maharashtra</option>
+														</select>
+                                                    </div>
+                                                    <!-- /.travel-select-icon -->
+                                                    <div class="travel-select-icon">
+                                                        <select class="form-control ">
+															  	<option value="default">enter city to visit</option>
+															  	<option value="Amritsar">Amritsar</option>
+															  	<option value="Jaipur">Jaipur</option>
+															  	<option value="Mumbai">Mumbai</option>
+														</select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-3 col-sm-4">
+                                                <div class="single-tab-select-box">
+                                                    <h2>check in</h2>
+                                                    <div class="travel-check-icon">
+                                                        <form action="#">
+                                                            <input type="text" name="check_in" class="form-control" data-toggle="datepicker" placeholder="01 -03 - 2021 ">
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-3 col-sm-4">
+                                                <div class="single-tab-select-box">
+                                                    <h2>check out</h2>
+                                                    <div class="travel-check-icon">
+                                                        <form action="#">
+                                                            <input type="text" name="check_out" class="form-control" data-toggle="datepicker" placeholder="02 -03 - 2021 ">
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-1 col-sm-4">
+                                                <div class="single-tab-select-box">
+                                                    <h2>Days</h2>
+                                                    <div class="travel-select-icon">
+                                                        <select class="form-control ">
+															  	<option value="default">2</option>
+															  	<option value="4">4</option>
+															  	<option value="5">5</option>
+															  	<option value="10">10</option>
+														</select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-1 col-sm-4">
+                                                <div class="single-tab-select-box">
+                                                    <h2>members</h2>
+                                                    <div class="travel-select-icon">
+                                                        <select class="form-control ">
+															  	<option value="default">1</option>
+															  	<option value="2">2</option>
+															  	<option value="4">4</option>
+															  	<option value="8">8</option>
+														</select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
 
-  40% {
+                                        <div class="row">
+                                            <div class="col-sm-5">
+                                                <div class="travel-budget">
+                                                    <div class="row">
+                                                        <div class="col-md-3 col-sm-4">
+                                                            <h3>budget : </h3>
+                                                        </div>
+                                                        <div class="co-md-9 col-sm-8">
+                                                            <div class="travel-filter">
+                                                                <div class="info_widget">
+                                                                    <div class="price_filter">
+                                                                        <div id="slider-range"></div>
+                                                                        <!--/.slider-range-->
+                                                                        <div class="price_slider_amount">
+                                                                            <input type="text" id="amount" name="price" placeholder="Add Your Price" />
+                                                                        </div>
+                                                                        <!--/.price_slider_amount-->
+                                                                    </div>
+                                                                    <!--/.price-filter-->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
 
+<<<<<<< HEAD
     -webkit-transform: scaleX(0.75) scaleY(1.25);
 
     transform: scaleX(0.75) scaleY(1.25);
@@ -13944,10 +14162,23 @@
                                     </div>
                                     <!--/.tab-para-->
 
+=======
+                                            <div class="clo-sm-7">
+                                                <div class="about-btn travel-mrt-0 pull-right">
+                                                    <button class="about-view travel-btn">
+															search	
+														</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--/.tab-para-->
+>>>>>>> 715f383426c310f6e5489f4bd8daa62d421d4e97
                                 </div>
                                 <!--/.tabpannel-->
                                 <div role="tabpanel" class="tab-pane fade in" id="hotels">
                                     <div class="tab-para">
+<<<<<<< HEAD
 
                                         <div class="row">
                                             <div class="col-lg-4 col-md-4 col-sm-12">
@@ -13993,11 +14224,38 @@
                                             </div>
                                             <!--/.col-->
 
+=======
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4 col-sm-12">
+                                                <div class="single-tab-select-box">
+                                                    <h2>destination</h2>
+                                                    <div class="travel-select-icon">
+                                                        <select class="form-control ">
+															  	<option value="default">enter your destination State</option>
+															  	<option value="Punjab">Punjab</option>
+															  	<option value="Rajasthan">Rajasthan</option>
+															  	<option value="Maharashtra">Maharashtra</option>
+														</select>
+                                                    </div>
+                                                    <!-- /.travel-select-icon -->
+                                                    <div class="travel-select-icon">
+                                                        <select class="form-control ">
+															  	<option value="default">enter your preferd location</option><!-- /.option-->
+															  	<option value="Amritsar">Amritsar</option><!-- /.option-->
+															  	<option value="Jaipur">Jaipur</option><!-- /.option-->
+															  	<option value="Mumbai">Mumbai</option><!-- /.option-->
+														</select>
+                                                    </div>
+                                                    <!-- /.travel-select-icon -->
+                                                </div>
+                                            </div>
+>>>>>>> 715f383426c310f6e5489f4bd8daa62d421d4e97
                                             <div class="col-lg-2 col-md-3 col-sm-4">
                                                 <div class="single-tab-select-box">
                                                     <h2>check in</h2>
                                                     <div class="travel-check-icon">
                                                         <form action="#">
+<<<<<<< HEAD
                                                             <input type="text" name="check_in" class="form-control"
                                                                 data-toggle="datepicker" placeholder="01 -03 - 2021 ">
                                                         </form>
@@ -14008,11 +14266,19 @@
                                             </div>
                                             <!--/.col-->
 
+=======
+                                                            <input type="text" name="check_in" class="form-control" data-toggle="datepicker" placeholder="01 -03 - 2021 ">
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+>>>>>>> 715f383426c310f6e5489f4bd8daa62d421d4e97
                                             <div class="col-lg-2 col-md-3 col-sm-4">
                                                 <div class="single-tab-select-box">
                                                     <h2>check out</h2>
                                                     <div class="travel-check-icon">
                                                         <form action="#">
+<<<<<<< HEAD
                                                             <input type="text" name="check_out" class="form-control"
                                                                 data-toggle="datepicker" placeholder="02 -03 - 2021 ">
                                                         </form>
@@ -14023,11 +14289,19 @@
                                             </div>
                                             <!--/.col-->
 
+=======
+                                                            <input type="text" name="check_out" class="form-control" data-toggle="datepicker" placeholder="02 -03 - 2021 ">
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+>>>>>>> 715f383426c310f6e5489f4bd8daa62d421d4e97
                                             <div class="col-lg-2 col-md-1 col-sm-4">
                                                 <div class="single-tab-select-box">
                                                     <h2>Days</h2>
                                                     <div class="travel-select-icon">
                                                         <select class="form-control ">
+<<<<<<< HEAD
 
                                                             <option value="default">2</option><!-- /.option-->
 
@@ -14045,11 +14319,22 @@
                                             </div>
                                             <!--/.col-->
 
+=======
+															  	<option value="default">2</option><!-- /.option-->
+															  	<option value="4">4</option><!-- /.option-->
+															  	<option value="5">5</option><!-- /.option-->
+															  	<option value="10">10</option><!-- /.option-->
+														</select>
+                                                    </div>
+                                                </div>
+                                            </div>
+>>>>>>> 715f383426c310f6e5489f4bd8daa62d421d4e97
                                             <div class="col-lg-2 col-md-1 col-sm-4">
                                                 <div class="single-tab-select-box">
                                                     <h2>members</h2>
                                                     <div class="travel-select-icon">
                                                         <select class="form-control ">
+<<<<<<< HEAD
 
                                                             <option value="default">1</option><!-- /.option-->
 
@@ -14093,12 +14378,37 @@
                                 </div>
                                 <!--/.tabpannel-->
 
+=======
+															  	<option value="default">1</option><!-- /.option-->
+															  	<option value="2">2</option><!-- /.option-->
+															  	<option value="4">4</option><!-- /.option-->
+															  	<option value="8">8</option><!-- /.option-->
+														</select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-5"></div>
+                                            <div class="clo-sm-7">
+                                                <div class="about-btn travel-mrt-0 pull-right">
+                                                    <button class="about-view travel-btn">
+															search	
+													</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/.tabpannel-->
+>>>>>>> 715f383426c310f6e5489f4bd8daa62d421d4e97
                                 <div role="tabpanel" class="tab-pane fade in" id="flights">
                                     <div class="tab-para">
                                         <div class="trip-circle">
                                             <div class="single-trip-circle">
                                                 <input type="radio" id="radio01" name="radio" />
                                                 <label for="radio01">
+<<<<<<< HEAD
                                                     <span class="round-boarder">
                                                         <span class="round-boarder1"></span>
                                                     </span>round trip
@@ -14143,11 +14453,42 @@
                                             </div>
                                             <!--/.col-->
 
+=======
+  														<span class="round-boarder">
+  															<span class="round-boarder1"></span>
+  														</span>round trip
+  													</label>
+                                            </div>
+                                            <div class="single-trip-circle">
+                                                <input type="radio" id="radio02" name="radio" />
+                                                <label for="radio02">
+  														<span class="round-boarder">
+  															<span class="round-boarder1"></span>
+  														</span>one way
+  													</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4 col-sm-12">
+                                                <div class="single-tab-select-box">
+                                                    <h2>from</h2>
+                                                    <div class="travel-select-icon">
+                                                        <select class="form-control ">
+															  	<option value="default">enter your location</option><!-- /.option-->
+															  	<option value="Maharashtra">Maharashtra</option><!-- /.option-->
+															  	<option value="Rajasthan">Rajasthan</option><!-- /.option-->
+															  	<option value="Jaipur">Jaipur</option><!-- /.option-->
+															</select>
+                                                    </div>
+                                                </div>
+                                            </div>
+>>>>>>> 715f383426c310f6e5489f4bd8daa62d421d4e97
                                             <div class="col-lg-2 col-md-3 col-sm-4">
                                                 <div class="single-tab-select-box">
                                                     <h2>departure</h2>
                                                     <div class="travel-check-icon">
                                                         <form action="#">
+<<<<<<< HEAD
                                                             <input type="text" name="departure" class="form-control"
                                                                 data-toggle="datepicker" placeholder="02 -03 - 2021 ">
                                                         </form>
@@ -14158,11 +14499,19 @@
                                             </div>
                                             <!--/.col-->
 
+=======
+                                                            <input type="text" name="departure" class="form-control" data-toggle="datepicker" placeholder="02 -03 - 2021 ">
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+>>>>>>> 715f383426c310f6e5489f4bd8daa62d421d4e97
                                             <div class="col-lg-2 col-md-3 col-sm-4">
                                                 <div class="single-tab-select-box">
                                                     <h2>return</h2>
                                                     <div class="travel-check-icon">
                                                         <form action="#">
+<<<<<<< HEAD
                                                             <input type="text" name="return" class="form-control"
                                                                 data-toggle="datepicker" placeholder="04 -03 - 2021 ">
                                                         </form>
@@ -14173,11 +14522,19 @@
                                             </div>
                                             <!--/.col-->
 
+=======
+                                                            <input type="text" name="return" class="form-control" data-toggle="datepicker" placeholder="04 -03 - 2021 ">
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+>>>>>>> 715f383426c310f6e5489f4bd8daa62d421d4e97
                                             <div class="col-lg-2 col-md-1 col-sm-4">
                                                 <div class="single-tab-select-box">
                                                     <h2>adults</h2>
                                                     <div class="travel-select-icon">
                                                         <select class="form-control ">
+<<<<<<< HEAD
 
                                                             <option value="default">1</option><!-- /.option-->
 
@@ -14195,11 +14552,22 @@
                                             </div>
                                             <!--/.col-->
 
+=======
+															  	<option value="default">1</option>
+															  	<option value="2">2</option>
+															  	<option value="3">3</option>
+															  	<option value="4">4</option>
+														</select>
+                                                    </div>
+                                                </div>
+                                            </div>
+>>>>>>> 715f383426c310f6e5489f4bd8daa62d421d4e97
                                             <div class="col-lg-2 col-md-1 col-sm-4">
                                                 <div class="single-tab-select-box">
                                                     <h2>childs</h2>
                                                     <div class="travel-select-icon">
                                                         <select class="form-control ">
+<<<<<<< HEAD
 
                                                             <option value="default">1</option><!-- /.option-->
 
@@ -24844,181 +25212,798 @@
                     $('.return-to-top').fadeIn();
 
                 } else {
+=======
+															  	<option value="default">1</option>
+															  	<option value="0">0</option>
+															  	<option value="2">2</option>
+															  	<option value="3">3</option>
+														</select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4 col-sm-12">
+                                                <div class="single-tab-select-box">
+                                                    <h2>to</h2>
+                                                    <div class="travel-select-icon">
+                                                        <select class="form-control ">
+															  	<option value="default">enter your destination location</option>
+															  	<option value="Punjab">Punjab</option>
+															  	<option value="Maharashtra">Maharashtra</option>
+															  	<option value="Rajasthan">Rajasthan</option>
+														</select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-3 col-sm-4">
+                                                <div class="single-tab-select-box">
+                                                    <h2>class</h2>
+                                                    <div class="travel-select-icon">
+                                                        <select class="form-control ">
+															  	<option value="default">enter class</option><!-- /.option-->
+															  	<option value="Economy">Economy</option><!-- /.option-->
+															  	<option value="First">First</option><!-- /.option-->
+															  	<option value="Business"> Business</option><!-- /.option-->
+														</select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="clo-sm-5">
+                                                <div class="about-btn pull-right">
+                                                    <button class="about-view travel-btn">
+															search	
+													</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--travel-box end-->
+>>>>>>> 715f383426c310f6e5489f4bd8daa62d421d4e97
 
-                    $('.return-to-top').fadeOut();
+    <!--service start-->
+    <section id="service" class="service">
+        <div class="container">
+            <div class="service-counter text-center">
+                <div class="col-md-4 col-sm-4">
+                    <div class="single-service-box">
+                        <div class="service-img">
+                            <img src="{%static 'assets/images/service/s1.png' %}" alt="service-icon" />
+                        </div>
+                        <div class="service-content">
+                            <h2>
+                                <a href="#">
+									amazing tour packages
+								</a>
+                            </h2>
+                            <p>We provide best and budget friendly tour packages.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <div class="single-service-box">
+                        <div class="service-img">
+                            <img src="{%static 'assets/images/service/s2.png' %}" alt="service-icon" />
+                        </div>
+                        <div class="service-content">
+                            <h2>
+                                <a href="#">
+										book top class hotel
+								</a>
+                            </h2>
+                            <p>We have tie-up with the best Hotels across the country to serve you the top class experiences.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <div class="single-service-box">
+                        <div class="statistics-img">
+                            <img src="{%static 'assets/images/service/s3.png' %}" alt="service-icon" />
+                        </div>
+                        <div class="service-content">
+                            <h2>
+                                <a href="#">
+										online flight booking
+								</a>
+                            </h2>
+                            <p>Visitors can book their flight tickets.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--service end-->
 
-                }
+    <!--galley start-->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="gallery-details">
+                <div class="gallary-header text-center">
+                    <h2>
+                        top destination
+                    </h2>
+                    <p>
+                        India's Most Visiting and Colourful Places to Visit.
+                    </p>
+                </div>
+                <!--/.gallery-header-->
+                <div class="gallery-box">
+                    <div class="gallery-content">
+                        <div class="filtr-container">
+                            <div class="row">
 
-            });
+                                <div class="col-md-6">
+                                    <div class="filtr-item">
+                                        <img src="{%static 'assets/images/gallary/g1.jpg' %}" alt="portfolio image" />
+                                        <div class="item-title">
+                                            <a href="#">
+													Mumbai
+											</a>
+                                            <p><span>Gateway of India</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="filtr-item">
+                                        <img src="{%static 'assets/images/gallary/g2.jpg' %}" alt="portfolio image" />
+                                        <div class="item-title">
+                                            <a href="#">
+													Amritsar
+												</a>
+                                            <p><span>Golden Temple</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="filtr-item">
+                                        <img src="{%static 'assets/images/gallary/g3.jpg' %}" alt="portfolio image" />
+                                        <div class="item-title">
+                                            <a href="#">
+													Jaipur
+											</a>
+                                            <p><span>Aamer Fort</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="filtr-item">
+                                        <img src="{%static 'assets/images/gallary/g4.jpg' %}" alt="portfolio image" />
+                                        <div class="item-title">
+                                            <a href="#">
+													Mumbai
+											</a>
+                                            <p><span>Bandra Worli, SeaLink</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="filtr-item">
+                                        <img src="{%static 'assets/images/gallary/g5.jpg' %}" alt="portfolio image" />
+                                        <div class="item-title">
+                                            <a href="#">
+													Jaipur
+												</a>
+                                            <p><span>Jal Mahal</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="filtr-item">
+                                        <img src="{%static 'assets/images/gallary/g6.jpg' %}" alt="portfolio image" />
+                                        <div class="item-title">
+                                            <a href="#">
+													Agra
+											</a>
+                                            <p><span>Taj Mahal</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--gallery end-->
 
-            $('.return-to-top').on('click', function () {
+    <!--discount-offer start-->
+    <section class="discount-offer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="dicount-offer-content text-center">
+                        <h2>Join with us within 01 January, 2022 and get upto 20% Discount</h2>
+                        <div class="campaign-timer">
+                            <div id="timer">
+                                <div class="time time-after" id="days">
+                                    <span></span>
+                                </div>
+                                <!--/.time-->
+                                <div class="time time-after" id="hours">
+                                </div>
+                                <!--/.time-->
+                                <div class="time time-after" id="minutes">
+                                </div>
+                                <!--/.time-->
+                                <div class="time" id="seconds">
+                                </div>
+                                <!--/.time-->
+                            </div>
+                            <!--/.timer-->
+                        </div>
+                        <!--/.campaign-timer-->
+                        <div class="about-btn">
+                            <button class="about-view discount-offer-btn">
+									join now
+								</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-                $('html, body').animate({
+    </section>
 
-                    scrollTop: 0
+    <section id="pack" class="packages">
+        <div class="container">
+            <div class="gallary-header text-center">
+                <h2>
+                    special packages
+                </h2>
+                <p>
+                    We have arranged some budget friendly tours.
+                </p>
+            </div>
+            <!--/.gallery-header-->
+            <div class="packages-content">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="single-package-item">
+                            <img src="{%static 'assets/images/packages/p1.jpg' %}" alt="package-place">
+                            <div class="single-package-item-txt">
+                                <h3>Mumbai <span class="pull-right">RS 24,999</span></h3>
+                                <div class="packages-para">
+                                    <p>
+                                        <span>
+												<i class="fa fa-angle-right"></i> 5 days 4 nights
+											</span>
+                                        <i class="fa fa-angle-right"></i> 5 star accomodation
+                                    </p>
+                                    <p>
+                                        <span>
+												<i class="fa fa-angle-right"></i>  transportation
+											</span>
+                                        <i class="fa fa-angle-right"></i> food facilities
+                                    </p>
+                                </div>
+                                <!--/.packages-para-->
+                                <div class="packages-review">
+                                    <p>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <span>1 review</span>
+                                    </p>
+                                </div>
+                                <!--/.packages-review-->
+                                <div class="about-btn">
+                                    <button class="about-view packages-btn">
+											book now
+										</button>
+                                </div>
+                                <!--/.about-btn-->
+                            </div>
+                            <!--/.single-package-item-txt-->
+                        </div>
+                        <!--/.single-package-item-->
 
-                }, 1500);
+                    </div>
+                    <!--/.col-->
 
-                return false;
+                    <div class="col-md-4 col-sm-6">
+                        <div class="single-package-item">
+                            <img src="{%static 'assets/images/packages/p2.jpg' %}" alt="package-place">
+                            <div class="single-package-item-txt">
+                                <h3>Amritsar <span class="pull-right">RS 14,999</span></h3>
+                                <div class="packages-para">
+                                    <p>
+                                        <span>
+												<i class="fa fa-angle-right"></i> 3 days 2 nights
+											</span>
+                                        <i class="fa fa-angle-right"></i> 5 star accomodation
+                                    </p>
+                                    <p>
+                                        <span>
+												<i class="fa fa-angle-right"></i>  transportation
+											</span>
+                                        <i class="fa fa-angle-right"></i> food facilities
+                                    </p>
+                                </div>
+                                <!--/.packages-para-->
+                                <div class="packages-review">
+                                    <p>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <span>2 review</span>
+                                    </p>
+                                </div>
+                                <!--/.packages-review-->
+                                <div class="about-btn">
+                                    <button class="about-view packages-btn">
+											book now
+										</button>
+                                </div>
+                                <!--/.about-btn-->
+                            </div>
+                            <!--/.single-package-item-txt-->
+                        </div>
+                        <!--/.single-package-item-->
 
-            });
+                    </div>
+                    <!--/.col-->
 
-            // 2. range js
+                    <div class="col-md-4 col-sm-6">
+                        <div class="single-package-item">
+                            <img src="{%static 'assets/images/packages/p3.jpg' %}" alt="package-place">
+                            <div class="single-package-item-txt">
+                                <h3>Jaipur <span class="pull-right">RS 11,999</span></h3>
+                                <div class="packages-para">
+                                    <p>
+                                        <span>
+												<i class="fa fa-angle-right"></i> 3 daays 2 nights
+											</span>
+                                        <i class="fa fa-angle-right"></i> 5 star accomodation
+                                    </p>
+                                    <p>
+                                        <span>
+												<i class="fa fa-angle-right"></i>  transportation
+											</span>
+                                        <i class="fa fa-angle-right"></i> food facilities
+                                    </p>
+                                </div>
+                                <!--/.packages-para-->
+                                <div class="packages-review">
+                                    <p>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <span>3 review</span>
+                                    </p>
+                                </div>
+                                <!--/.packages-review-->
+                                <div class="about-btn">
+                                    <button class="about-view packages-btn">
+											book now
+										</button>
+                                </div>
+                                <!--/.about-btn-->
+                            </div>
+                            <!--/.single-package-item-txt-->
+                        </div>
+                        <!--/.single-package-item-->
 
-            $("#slider-range").slider({
-                range: true,
-                min: 0,
-                max: 15000,
-                values: [2500, 8500],
-                slide: function (event, ui) {
-                    $("#amount").val("Rs" + ui.values[0] + " - Rs" + ui.values[1]);
-                }
-            });
-            $("#amount").val("Rs" + $("#slider-range").slider("values", 0) +
-                " - Rs" + $("#slider-range").slider("values", 1));
+                    </div>
+                    <!--/.col-->
+
+                    <div class="col-md-4 col-sm-6">
+                        <div class="single-package-item">
+                            <img src="{%static 'assets/images/packages/p4.jpg' %}" alt="package-place">
+                            <div class="single-package-item-txt">
+                                <h3>Delhi <span class="pull-right">RS 08,999</span></h3>
+                                <div class="packages-para">
+                                    <p>
+                                        <span>
+												<i class="fa fa-angle-right"></i> 3 days  2nights
+											</span>
+                                        <i class="fa fa-angle-right"></i> 5 star accomodation
+                                    </p>
+                                    <p>
+                                        <span>
+												<i class="fa fa-angle-right"></i>  transportation
+											</span>
+                                        <i class="fa fa-angle-right"></i> food facilities
+                                    </p>
+                                </div>
+                                <!--/.packages-para-->
+                                <div class="packages-review">
+                                    <p>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <span>4 review</span>
+                                    </p>
+                                </div>
+                                <!--/.packages-review-->
+                                <div class="about-btn">
+                                    <button class="about-view packages-btn">
+											book now
+										</button>
+                                </div>
+                                <!--/.about-btn-->
+                            </div>
+                            <!--/.single-package-item-txt-->
+                        </div>
+                        <!--/.single-package-item-->
+
+                    </div>
+                    <!--/.col-->
+
+                    <div class="col-md-4 col-sm-6">
+                        <div class="single-package-item">
+                            <img src="{%static 'assets/images/packages/p5.jpg' %}" alt="package-place">
+                            <div class="single-package-item-txt">
+                                <h3>Kedarnath <span class="pull-right">RS 09,999</span></h3>
+                                <div class="packages-para">
+                                    <p>
+                                        <span>
+												<i class="fa fa-angle-right"></i> 5 daays 4 nights
+											</span>
+                                        <i class="fa fa-angle-right"></i> 5 star accomodation
+                                    </p>
+                                    <p>
+                                        <span>
+												<i class="fa fa-angle-right"></i>  transportation
+											</span>
+                                        <i class="fa fa-angle-right"></i> food facilities
+                                    </p>
+                                </div>
+                                <!--/.packages-para-->
+                                <div class="packages-review">
+                                    <p>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <span>5 review</span>
+                                    </p>
+                                </div>
+                                <!--/.packages-review-->
+                                <div class="about-btn">
+                                    <button class="about-view packages-btn">
+											book now
+										</button>
+                                </div>
+                                <!--/.about-btn-->
+                            </div>
+                            <!--/.single-package-item-txt-->
+                        </div>
+                        <!--/.single-package-item-->
+
+                    </div>
+                    <!--/.col-->
+
+                    <div class="col-md-4 col-sm-6">
+                        <div class="single-package-item">
+                            <img src="{%static 'assets/images/packages/p6.jpg' %}" alt="package-place">
+                            <div class="single-package-item-txt">
+                                <h3>Goa <span class="pull-right">29,999</span></h3>
+                                <div class="packages-para">
+                                    <p>
+                                        <span>
+												<i class="fa fa-angle-right"></i> 4 days 3 nights
+											</span>
+                                        <i class="fa fa-angle-right"></i> 5 star accomodation
+                                    </p>
+                                    <p>
+                                        <span>
+												<i class="fa fa-angle-right"></i>  transportation
+											</span>
+                                        <i class="fa fa-angle-right"></i> food facilities
+                                    </p>
+                                </div>
+                                <!--/.packages-para-->
+                                <div class="packages-review">
+                                    <p>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <span>6 review</span>
+                                    </p>
+                                </div>
+                                <!--/.packages-review-->
+                                <div class="about-btn">
+                                    <button class="about-view packages-btn">
+											book now
+										</button>
+                                </div>
+                                <!--/.about-btn-->
+                            </div>
+                            <!--/.single-package-item-txt-->
+                        </div>
+                        <!--/.single-package-item-->
+
+                    </div>
+                    <!--/.col-->
+
+                </div>
+                <!--/.row-->
+            </div>
+            <!--/.packages-content-->
+        </div>
+        <!--/.container-->
+
+    </section>
+    <!--/.packages-->
+    <!--packages end-->
+
+    <!--special-offer start-->
+    <section id="spo" class="special-offer">
+        <div class="container">
+            <div class="special-offer-content">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <div class="single-special-offer">
+                            <div class="single-special-offer-txt">
+                                <h2>Goa</h2>
+                                <div class="packages-review special-offer-review">
+                                    <p>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <span>6 review</span>
+                                    </p>
+                                </div>
+                                <!--/.packages-review-->
+                                <div class="packages-para special-offer-para">
+                                    <p>
+                                        <span>
+												<i class="fa fa-angle-right"></i> 4 days 3 nights
+											</span>
+                                        <span>
+												<i class="fa fa-angle-right"></i> 2 person
+											</span>
+                                        <span>
+												<i class="fa fa-angle-right"></i>  5 star accomodation
+											</span>
+                                    </p>
+                                    <p>
+                                        <span>
+												<i class="fa fa-angle-right"></i>  transportation
+											</span>
+                                        <span>
+												<i class="fa fa-angle-right"></i>  food facilities
+											</span>
+                                    </p>
+                                    <p class="offer-para">
+                                        A kaleidoscopic blend of Indian and Portuguese cultures, sweetened with sun, sea, sand, seafood, susegad and spirituality, Goa is India's pocket-sized paradise.
+                                    </p>
+                                </div>
+                                <!--/.packages-para-->
+                                <div class="offer-btn-group">
+                                    <div class="about-btn">
+                                        <button class="about-view packages-btn offfer-btn">
+												make tour
+											</button>
+                                    </div>
+                                    <!--/.about-btn-->
+                                    <div class="about-btn">
+                                        <button class="about-view packages-btn">
+												book now
+											</button>
+                                    </div>
+                                    <!--/.about-btn-->
+                                </div>
+                                <!--/.offer-btn-group-->
+                            </div>
+                            <!--/.single-special-offer-txt-->
+                        </div>
+                        <!--/.single-special-offer-->
+                    </div>
+                    <!--/.col-->
+                    <div class="col-sm-4">
+                        <div class="single-special-offer">
+                            <div class="single-special-offer-bg">
+                                <img src="{%static 'assets/images/offer/offer-shape.png' %}" alt="offer-shape">
+                            </div>
+                            <!--/.single-special-offer-bg-->
+                            <div class="single-special-shape-txt">
+                                <h3>special offer</h3>
+                                <h4><span>20%</span><br>off</h4>
+                                <p><span>RS 24K</span><br>regular Rs 30K</p>
+                            </div>
+                            <!--/.single-special-shape-txt-->
+                        </div>
+                        <!--/.single-special-offer-->
+                    </div>
+                    <!--/.col-->
+                </div>
+                <!--/.row-->
+            </div>
+            <!--/.special-offer-content-->
+        </div>
+        <!--/.container-->
+
+    </section>
+    <!--/.special-offer end-->
+    <!--special-offer end-->
+
+    <!--subscribe start-->
+    <section id="subs" class="subscribe">
+        <div class="container">
+            <div class="subscribe-title text-center">
+                <h2>
+                    Join our Subscribers List to Get Regular Update
+                </h2>
+                <p>
+                    Subscribe Now. We will send you Best offer for your Trip
+                </p>
+            </div>
+            <form>
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                        <div class="custom-input-group">
+                            <input type="email" class="form-control" placeholder="Enter your Email Here">
+                            <button class="appsLand-btn subscribe-btn">Subscribe</button>
+                            <div class="clearfix"></div>
+                            <i class="fa fa-envelope"></i>
+                        </div>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </section>
+    <!--subscribe end-->
+
+    <!-- footer-copyright start -->
+    <footer class="footer-copyright">
+        <div class="container">
+            <div class="footer-content">
+                <div class="row">
+
+                    <div class="col-sm-3">
+                        <div class="single-footer-item">
+                            <div class="footer-logo">
+                                <a href="index.html">
+										HASSY<span>Tours</span>
+									</a>
+                                <p>
+                                    Future travel agency
+                                </p>
+                            </div>
+                        </div>
+                        <!--/.single-footer-item-->
+                    </div>
+                    <!--/.col-->
+
+                    <div class="col-sm-3">
+                        <div class="single-footer-item">
+                            <h2>link</h2>
+                            <div class="single-footer-txt">
+                                <p><a href="#">home</a></p>
+                                <p><a href="#">destination</a></p>
+                                <p><a href="#">packages</a></p>
+                                <p><a href="#">hotel</a></p>
+                                <p><a href="#">train</a></p>
+                                <p><a href="#">contacts</a></p>
+                            </div>
+                            <!--/.single-footer-txt-->
+                        </div>
+                        <!--/.single-footer-item-->
+
+                    </div>
+                    <!--/.col-->
+
+                    <div class="col-sm-3">
+                        <div class="single-footer-item">
+                            <h2>popular destination</h2>
+                            <div class="single-footer-txt">
+                                <p><a href="#">Goa</a></p>
+                                <p><a href="#">Kedarnath</a></p>
+                                <p><a href="#">Mumbai</a></p>
+                                <p><a href="#">Amritsar</a></p>
+                                <p><a href="#">Jaipur</a></p>
+                            </div>
+                            <!--/.single-footer-txt-->
+                        </div>
+                        <!--/.single-footer-item-->
+                    </div>
+                    <!--/.col-->
+
+                    <div class="col-sm-3">
+                        <div class="single-footer-item text-center">
+                            <h2 class="text-left">contacts</h2>
+                            <div class="single-footer-txt text-left">
+                                <p>+91 123 456 7890</p>
+                                <p class="foot-email"><a href="#">HASSY@gmail.com</a></p>
+                                <p>NIIT University</p>
+                                <p>Neemrana, India</p>
+                            </div>
+                            <!--/.single-footer-txt-->
+                        </div>
+                        <!--/.single-footer-item-->
+                    </div>
+                    <!--/.col-->
+
+                </div>
+                <!--/.row-->
+
+            </div>
+            <!--/.footer-content-->
+            <hr>
+            <div class="foot-icons ">
+                <ul class="footer-social-links list-inline list-unstyled">
+                    <li><a href="#" target="_blank" class="foot-icon-bg-1"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#" target="_blank" class="foot-icon-bg-2"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#" target="_blank" class="foot-icon-bg-3"><i class="fa fa-instagram"></i></a></li>
+                </ul>
+                <p>&copy; 2021 <a href="#">TraveSpace</a>. All Right Reserved</p>
+
+            </div>
+            <!--/.foot-icons-->
+            <div id="scroll-Top">
+                <i class="fa fa-angle-double-up return-to-top" id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
+            </div>
+            <!--/.scroll-Top-->
+        </div>
+        <!-- /.container-->
+
+    </footer>
+    <!-- /.footer-copyright-->
+    <!-- footer-copyright end -->
 
 
-            // Quantity Buttons Shop
-
-            $(".qtyplus").on("click", function () {
-                var b = $(this).parents(".quantity-form").find("input.qty"),
-                    c = parseInt(b.val(), 10) + 1,
-                    d = parseInt(b.attr("max"), 10);
-                d || (d = 9999999999), c <= d && (b.val(c), b.change())
-            });
-            $(".qtyminus").on("click", function () {
-                var b = $(this).parents(".quantity-form").find("input.qty"),
-                    c = parseInt(b.val(), 10) - 1,
-                    d = parseInt(b.attr("min"), 10);
-                d || (d = 1), c >= d && (b.val(c), b.change())
-            });
 
 
-            // 3.Countdown timer 
+    <script src="{% static 'assets/js/jquery.js' %}"></script>
 
-            function makeTimer() {
+    <!--modernizr.min.js-->
+    <script src="{% static 'https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js' %}"></script>
 
-                var endTime = new Date("January 01, 2022 12:00:00 PDT");
-                var endTime = (Date.parse(endTime)) / 1000;
+    <!--bootstrap.min.js-->
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
 
-                var now = new Date();
-                var now = (Date.parse(now) / 1000);
+    <!-- bootsnav js -->
+    <script src="{% static 'assets/js/bootsnav.js' %}"></script>
 
-                var timeLeft = endTime - now;
+    <!-- jquery.filterizr.min.js -->
+    <script src="{% static 'assets/js/jquery.filterizr.min.js' %}"></script>
 
-                var days = Math.floor(timeLeft / 86400);
-                var hours = Math.floor((timeLeft - (days * 86400)) / 3600);
-                var minutes = Math.floor((timeLeft - (days * 86400) - (hours * 3600)) / 60);
-                var seconds = Math.floor((timeLeft - (days * 86400) - (hours * 3600) - (minutes * 60)));
+    <script src="{% static 'https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js' %}"></script>
 
-                if (hours < "10") {
-                    hours = "0" + hours;
-                }
-                if (minutes < "10") {
-                    minutes = "0" + minutes;
-                }
-                if (seconds < "10") {
-                    seconds = "0" + seconds;
-                }
+    <!--jquery-ui.min.js-->
+    <script src="{% static 'assets/js/jquery-ui.min.js' %}"></script>
 
-                $("#days").html(days + '<span class="camp">Days</span>');
-                $("#hours").html(hours + '<span class="camp">Hour</span>');
-                $("#minutes").html(minutes + '<span class="camp">Minute</span>');
-                $("#seconds").html(seconds + '<span class="camp">Second</span>');
+    <!-- counter js -->
+    <script src="{% static 'assets/js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'assets/js/waypoints.min.js' %}"></script>
 
-            }
+    <!--owl.carousel.js-->
+    <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
 
-            setInterval(function () {
-                makeTimer();
-            }, 1000);
+    <!-- jquery.sticky.js -->
+    <script src="{% static 'assets/js/jquery.sticky.js' %}"></script>
 
-            // 4. owl carousel
+    <!--datepicker.js-->
+    <script src="{% static 'assets/js/datepicker.js' %}"></script>
 
-            // i. #testimonial-carousel
-
-
-            var owl = $('#testemonial-carousel');
-            owl.owlCarousel({
-                items: 3,
-                margin: 0,
-
-                loop: true,
-                autoplay: true,
-                smartSpeed: 1000,
-
-
-                dots: true,
-                autoplayHoverPause: true,
-
-                responsiveClass: true,
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    640: {
-                        items: 1
-                    },
-                    767: {
-                        items: 2
-                    },
-                    992: {
-                        items: 3
-                    }
-                }
-
-
-            });
-
-            // 5. datepicker
-            $('[data-toggle="datepicker"]').datepicker();
-
-            // 6. Smooth Scroll spy
-
-            $('.header-area').sticky({
-                topSpacing: 0
-            });
-
-            //=============
-
-            $('li.smooth-menu a').bind("click", function (event) {
-                event.preventDefault();
-                var anchor = $(this);
-                $('html, body').stop().animate({
-                    scrollTop: $(anchor.attr('href')).offset().top - -1
-                }, 1200, 'easeInOutExpo');
-            });
-
-            $('body').scrollspy({
-                target: '.navbar-collapse',
-                offset: 0
-            });
-
-            // 7.animation support
-
-            $(window).load(function () {
-
-                $(".about-us-txt h2").removeClass("animated fadeInUp").css({
-                    'opacity': '0'
-                });
-                $(".about-us-txt button").removeClass("animated fadeInDown").css({
-                    'opacity': '0'
-                });
-            });
-
-            $(window).load(function () {
-
-                $(".about-us-txt h2").addClass("animated fadeInUp").css({
-                    'opacity': '0'
-                });
-                $(".about-us-txt button").addClass("animated fadeInDown").css({
-                    'opacity': '0'
-                });
-
-            });
-
-
-        });
-    </script>
+    <!--Custom JS-->
+    <script src="{% static 'assets/js/custom.js' %}"></script>
 
 
 </body>

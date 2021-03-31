@@ -6,221 +6,244 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{%static 'style4.css'%}">
+    <link rel="shortcut icon" type="image/icon" href="{% static 'assets/logo/favicon.png' %}" />
 
 
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-
-    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Ubuntu:ital,wght@0,500;1,400&display=swap"
-        rel="stylesheet">
-    
-
-    <title>Travel Space</title>
+    <title>Travel Space | Login</title>
     <style>
-        body {
-            font-size: 120%;
-            font-family: 'Ubuntu', sans-serif;
-        }
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Montserrat', sans-serif;
+	line-height: 1.6;
+	margin: 0;
+	min-height: 100vh;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
-        .content {
-            border: 2px solid #B0BEC5;
-            height: 690px;
-            border-radius: 8px;
-            margin: 25px;
-            box-shadow: 10px 10px 10px #CFD8DC;
-            background-color: #E0F7FA;
-            opacity: 1;
-        }
 
-        .new1 {
-            color: #3D5AFE;
-        }
+h2,
+h3,
+a {
+	color: #34495e;
+}
 
-        .float_left {
-            background-color: #FAFAFA;
-            position: absolute;
-            height: 70%;
-            border: 2px solid #B0BEC5;
-            border-radius: 8px;
-            width: 25%;
-            margin: 25px;
-            box-shadow: 1px 1px 1px #CFD8DC;
+a {
+	text-decoration: none;
+}
 
-            opacity: 1;
-            padding: 30px;
-        }
 
-        h2 {
-            justify-content: center;
-            margin-left: 120px;
-        }
 
-        /* Bordered form */
-        form {
-            border: 3px solid #f1f1f1;
-        }
+.logo {
+	margin: 0;
+	font-size: 1.15em;
+}
 
-        /* Full-width inputs */
-        input[type=text],
-        input[type=password] {
-            width: 100%;
-            padding: 12px 20px;
-            margin: 8px 0;
-            display: inline-block;
-            border: 1px solid #ccc;
-            box-sizing: border-box;
-        }
+.main-nav {
+	margin-top: 5px;
 
-        /* Set a style for all buttons */
-        button {
-            background-color: #90CAF9;
-            color: white;
-            padding: 14px 20px;
-            border-radius: 5px;
-            margin: 8px 0;
-            border: none;
-            cursor: pointer;
-            width: 100%;
-        }
+}
+.logo a,
+.main-nav a {
+	padding: 10px 15px;
+	text-transform: capital;
+	text-align: center;
+	display: block;
+}
 
-        /* Add a hover effect for buttons */
-        button:hover {
-            opacity: 0.4;
-        }
+.main-nav a {
+	color: #34495e;
+	font-size: .99em;
+}
 
-        /* Extra style for the cancel button (red) */
-        .cancelbtn {
-            width: auto;
-            padding: 10px 18px;
-            background-color: #4FC3F7;
-        }
+.main-nav a:hover {
+	color: #718daa;
+}
 
-        /* Center the avatar image inside this container */
-        .imgcontainer {
-            text-align: center;
-            margin: 24px 0 12px 0;
-        }
 
-        /* Avatar image */
-        img.avatar {
-            width: 40%;
-            border-radius: 50%;
-        }
 
-        /* Add padding to containers */
-        .container {
-            padding: 16px;
-        }
+.header {
+	padding-top: .5em;
+	padding-bottom: .5em;
+	border: 1px solid #a2a2a2;
+	background-color: #f4f4f4;
+	-webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
 
-        /* The "Forgot password" text */
-        span.psw {
-            float: right;
-            padding-top: 16px;
-        }
 
-        /* Change styles for span and cancel button on extra small screens */
-        @media screen and (max-width: 300px) {
-            span.psw {
-                display: block;
-                float: none;
-            }
+/* ================================= 
+  Media Queries
+==================================== */
 
-            .cancelbtn {
-                width: 100%;
-            }
 
-            .img1 {
-                width: 10px;
-            }
 
-            .center {
-                text-justify: center;
-            }
-        }
+
+@media (min-width: 769px) {
+	.header,
+	.main-nav {
+		display: flex;
+	}
+	.header {
+		flex-direction: column;
+		align-items: center;
+    	.header{
+		width: 80%;
+		margin: 0 auto;
+		max-width: 1150px;
+	}
+	}
+
+}}
+
+@media (min-width: 1025px) {
+	.header {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+}
+.btn1{
+  display: block;
+  width: 400px;
+  margin: 0 auto 0 auto;
+  position: absolute;
+  font-size: 50px;
+  left: 0;
+  right: 0;
+  top: 30vh;
+}
+
+#btn2 {
+  display: block;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: var(--light);
+  width: 400px;
+  height: 70px;
+  border-radius: 30px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--text);
+  background-size: 100% 100%;
+  
+  box-shadow: 0 0 0 7px var(--light) inset;
+  margin-top: 495px;
+  margin-left: 190px;
+  font-size: 50px;
+}
+btn2:hover {
+  background-image: linear-gradient(
+    145deg,
+    transparent 10%,
+    var(--dark) 10% 20%,
+    transparent 20% 30%,
+    var(--dark) 30% 40%,
+    transparent 40% 50%,
+    var(--dark) 50% 60%,
+    transparent 60% 70%,
+    var(--dark) 70% 80%,
+    transparent 80% 90%,
+    var(--dark) 90% 100%
+  );
+  animation: background 3s linear infinite;
+}
+
+@keyframes background {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 400px 0;
+  }
+}
+
+
+
     </style>
+
+
 </head>
 
 <body>
+    <header class="header">
+		<h2 class="logo"><a href="/">Travel <span>Space</span></a></h2>
+      <ul class="main-nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="train">Train</a></li>
+          <li><a href="hotel">Hotel</a></li>
+          <li><a href="contact">Contact Us</a></li>
+          <li><a href="signup">Signup</a></li>
+      </ul>
+	</header> 
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-black">
-        <div class="container-fluid">
-            <a class="navbar-brand new1" href="#">Travel Space</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/about">Destination</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Travel Mode
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="/service">Train</a></li>
-                            <li><a class="dropdown-item" href="#">Bus</a></li>
-                            <li><a class="dropdown-item" href="#">Flight</a></li>
-                            <li><a class="dropdown-item" href="#">Cab</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="hotel" tabindex="-1" aria-disabled="true">Hotels</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="contact" tabindex="-1" aria-disabled="true">Contact Us</a>
-                    </li>
-                </ul>
-
-            </div>
+    <div class="container">
+        <div class="img">
+            <img src="{% static 'img/img-3.png' %}" alt="">
         </div>
-    </nav>
-
-    <div class="content">
-        <div class="float_left">
-            <form action="action_page.php" method="POST">
-                <div class="container">
-                    <label for="uname"><b>Username</b></label>
-                    <input type="text" placeholder="Enter Username" name="uname" required>
-
-                    <label for="psw"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="psw" required>
-
-                    <button type="submit">Login</button>
-                    <label>
-                        <input type="checkbox" checked="checked" name="remember"> Remember me
-                    </label>
+        <div class="login-box">
+            <form action="signin" method="post">
+              {% csrf_token %}
+                <img src="{% static 'img/avatar.png'%}" alt="" class="avatar">
+                <h2>Sign in</h2>
+                <div class="input-group">
+                    <div class="icon">
+                        <i class="fa fa-user"></i>
+                    </div>
+                    <div>
+                        <h5>Username</h5>
+                        <input type="text" class="input" name="uname">
+                    </div>
                 </div>
+                <div class="input-group">
+                    <div class="icon">
+                        <i class="fa fa-lock"></i>
+                    </div>
+                    <div>
+                        <h5>Password</h5>
+                        <input type="password" class="input" name="psw">
+                    </div>
+                </div>
+                <a href="#">Forgot Password?</a>
+                <input type="submit" class="btn" value="Login">
+                
             </form>
-            <div class="container" style="background-color:#f1f1f1">
-
-                <a href="signup"> <button>Signup </button></a>
-
-            </div>
-
+            
         </div>
-
+        
     </div>
+    
+    
+    <br>
+    <a href="/" target="_blank" class="copyright">&copy; Travel Space</a>
+    <script src="{% static 'app.js' %}" type="text/javascript"></script>
+    <script>
+        $("#search-icon").click(function () {
+            $(".nav").toggleClass("search");
+            $(".nav").toggleClass("no-search");
+            $(".search-input").toggleClass("search-active");
+        });
 
-    <!-- Optional JavaScript; choose one of the two! -->
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
-        crossorigin="anonymous"></script>
+        $('.menu-toggle').click(function () {
+            $(".nav").toggleClass("mobile-nav");
+            $(this).toggleClass("is-active");
+        });
 
-
+    </script>
 </body>
 
 </html>
