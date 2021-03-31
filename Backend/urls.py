@@ -28,6 +28,6 @@ urlpatterns = [
     path("contact",include('home.urls')),
     path("",include('frontapp.urls')),
     path("dbapp2/",include('dbapp2.urls')),
-    
+    path("dbapp1/",include('dbapp1.urls')),
 ]
 
