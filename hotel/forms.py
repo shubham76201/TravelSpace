@@ -9,5 +9,7 @@ class AvailabilityForm(forms.Form):
         ('QUE', 'QUEEN'),
     )
     room_category = forms.ChoiceField(choices=ROOM_CATEGORIES, required=True)
-    checkin = forms.DateTimeField(required=True, input_formats=["%Y-%m-%dT%H:%M", "%Y-%m-%dT%H:%M%Z"])
-    checkout = forms.DateTimeField(required=True, input_formats=["%Y-%m-%dT%H:%M", "%Y-%m-%dT%H:%M%Z"])
+    checkin = forms.DateTimeField(
+        required=True, input_formats=["%Y-%m-%dT%H:%M", "%Y-%m-%dT%H:%M%Z"], widget=forms.DateTimeInput(attrs={'type': 'datetime-local'}))
+    checkout = forms.DateTimeField(
+        required=True, input_formats=["%Y-%m-%dT%H:%M", "%Y-%m-%dT%H:%M%Z"], widget=forms.DateTimeInput(attrs={'type': 'datetime-local'}))
