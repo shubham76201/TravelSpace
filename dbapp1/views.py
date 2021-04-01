@@ -7,11 +7,13 @@ def signin(request):
       username1=request.POST['uname']
       password1=request.POST['psw'] 
 
-      s = auth.authenticate(username=username1,password=password1)
-      if s is None:
-          return redirect('signin')
-      else:
+      user = auth.authenticate(username=username1,password=password1)
+      if user is not None:
+          auth.login(request,user)
           return redirect('/')
+      else:
+        return redirect('signin')
+        #return render(request,'LandingPage.html', context={'temp4' : username1})
     else:
          return render(request,'index.html')
 

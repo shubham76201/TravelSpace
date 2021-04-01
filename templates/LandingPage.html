@@ -37,6 +37,7 @@
 </head>
 
 <body>
+                                    
     <!-- main-menu Start -->
     <header class="top-area">
         <div class="header-area">
@@ -63,7 +64,7 @@
                                         <a href="/">home</a>
                                     </li>
                                     <li>
-                                        <a href="#gallery">Destination</a>
+                                        <a href="#gallery">Dest</a>
                                     </li>
                                     <li>
                                         <a href="#pack">Packages </a>
@@ -74,10 +75,17 @@
                                     <li>
                                         <a href="dbapp2/train">Train</a>
                                     </li>
+                                    
+                                    {% if user.is_authenticated %} 
                                     <li>
-                                        <a href="dbapp1/signin"><button class="book-btn">Login
-                                        </button></a>
-                                    </li>
+                                        <a href="#">Hi,<b>{{user}}</b></i></a>
+                                    </li>  
+                                    <li><a href="dbapp3/logout"><b>Logout</b></a></li>
+                                    
+                                    
+                                    {% else %}      
+                                    <li><a href="dbapp1/signin">Login</a></li>
+                                    {% endif %}
                                 </ul>
                             </div>
                         </div>

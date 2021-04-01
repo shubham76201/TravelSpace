@@ -296,6 +296,7 @@ body {
 /*book-btn*/
 
 .book-btn {
+    margin-bottom: 10px;
     background: #00d8ff;
     border: 1px solid #00d8ff;
     width: 120px;
@@ -306,7 +307,7 @@ body {
     font-size: 14px;
     font-family: 'Poppins', sans-serif;
     text-transform: capitalize;
-    border-radius: 5px;
+    border-radius: 2px;
     -webkit-transition: 0.5s ease-in-out;
     -moz-transition: 0.5s ease-in-out;
     -ms-transition: 0.5s ease-in-out;
