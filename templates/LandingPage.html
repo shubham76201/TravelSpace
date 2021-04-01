@@ -37,7 +37,7 @@
 </head>
 
 <body>
-                                    
+
     <!-- main-menu Start -->
     <header class="top-area">
         <div class="header-area">
@@ -75,15 +75,15 @@
                                     <li>
                                         <a href="dbapp2/train">Train</a>
                                     </li>
-                                    
-                                    {% if user.is_authenticated %} 
+
+                                    {% if user.is_authenticated %}
                                     <li>
                                         <a href="#">Hi,<b>{{user}}</b></i></a>
-                                    </li>  
+                                    </li>
                                     <li><a href="dbapp3/logout"><b>Logout</b></a></li>
-                                    
-                                    
-                                    {% else %}      
+
+
+                                    {% else %}
                                     <li><a href="dbapp1/signin"><b>Login</b></a></li>
                                     {% endif %}
                                 </ul>
@@ -622,44 +622,6 @@
     </section>
     <!--gallery end-->
 
-    <!--discount-offer start-->
-    <section class="discount-offer">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="dicount-offer-content text-center">
-                        <h2>Join with us within 01 January, 2022 and get upto 20% Discount</h2>
-                        <div class="campaign-timer">
-                            <div id="timer">
-                                <div class="time time-after" id="days">
-                                    <span></span>
-                                </div>
-                                <!--/.time-->
-                                <div class="time time-after" id="hours">
-                                </div>
-                                <!--/.time-->
-                                <div class="time time-after" id="minutes">
-                                </div>
-                                <!--/.time-->
-                                <div class="time" id="seconds">
-                                </div>
-                                <!--/.time-->
-                            </div>
-                            <!--/.timer-->
-                        </div>
-                        <!--/.campaign-timer-->
-                        <div class="about-btn">
-                            <button class="about-view discount-offer-btn">
-									join now
-								</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section>
-
     <section id="pack" class="packages">
         <div class="container">
             <div class="gallary-header text-center">
@@ -705,7 +667,7 @@
                                 </div>
                                 <!--/.packages-review-->
                                 <div class="about-btn">
-                                    <button class="about-view packages-btn">
+                                    <button class="about-view packages-btn" onclick="onButtonClick()">
 											book now
 										</button>
                                 </div>
@@ -750,7 +712,7 @@
                                 </div>
                                 <!--/.packages-review-->
                                 <div class="about-btn">
-                                    <button class="about-view packages-btn">
+                                    <button class="about-view packages-btn" onclick="onButtonClick()">
 											book now
 										</button>
                                 </div>
@@ -795,7 +757,7 @@
                                 </div>
                                 <!--/.packages-review-->
                                 <div class="about-btn">
-                                    <button class="about-view packages-btn">
+                                    <button class="about-view packages-btn" onclick="onButtonClick()">
 											book now
 										</button>
                                 </div>
@@ -840,7 +802,7 @@
                                 </div>
                                 <!--/.packages-review-->
                                 <div class="about-btn">
-                                    <button class="about-view packages-btn">
+                                    <button class="about-view packages-btn" onclick="onButtonClick()">
 											book now
 										</button>
                                 </div>
@@ -885,7 +847,7 @@
                                 </div>
                                 <!--/.packages-review-->
                                 <div class="about-btn">
-                                    <button class="about-view packages-btn">
+                                    <button class="about-view packages-btn" onclick="onButtonClick()">
 											book now
 										</button>
                                 </div>
@@ -930,7 +892,7 @@
                                 </div>
                                 <!--/.packages-review-->
                                 <div class="about-btn">
-                                    <button class="about-view packages-btn">
+                                    <button class="about-view packages-btn" onclick="onButtonClick()">
 											book now
 										</button>
                                 </div>
@@ -1007,7 +969,7 @@
                                     </div>
                                     <!--/.about-btn-->
                                     <div class="about-btn">
-                                        <button class="about-view packages-btn">
+                                        <button class="about-view packages-btn" onclick="onButtonClick()">
 												book now
 											</button>
                                     </div>
@@ -1046,35 +1008,6 @@
     </section>
     <!--/.special-offer end-->
     <!--special-offer end-->
-
-    <!--subscribe start-->
-    <section id="subs" class="subscribe">
-        <div class="container">
-            <div class="subscribe-title text-center">
-                <h2>
-                    Join our Subscribers List to Get Regular Update
-                </h2>
-                <p>
-                    Subscribe Now. We will send you Best offer for your Trip
-                </p>
-            </div>
-            <form>
-                <div class="row">
-                    <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-                        <div class="custom-input-group">
-                            <input type="email" class="form-control" placeholder="Enter your Email Here">
-                            <button class="appsLand-btn subscribe-btn">Subscribe</button>
-                            <div class="clearfix"></div>
-                            <i class="fa fa-envelope"></i>
-                        </div>
-
-                    </div>
-                </div>
-            </form>
-        </div>
-
-    </section>
-    <!--subscribe end-->
 
     <!-- footer-copyright start -->
     <footer class="footer-copyright">
@@ -1135,13 +1068,8 @@
                         <div class="single-footer-item text-center">
                             <h2 class="text-left">contacts</h2>
                             <div class="single-footer-txt text-left">
-<<<<<<< HEAD
-                                <p>+91 7620132400</p>
-                                <p class="foot-email"><a href="#">TravelSpace@gmail.com</a></p>
-=======
                                 <p>+91 123 456 7890</p>
                                 <p class="foot-email"><a href="#">Travelspace@gmail.com</a></p>
->>>>>>> 90930a680b2ca5d7a18a6a4fa4f4300a061c5964
                                 <p>NIIT University</p>
                                 <p>Neemrana, India</p>
                             </div>
@@ -1215,6 +1143,45 @@
 
     <!--Custom JS-->
     <script src="{% static 'assets/js/custom.js' %}"></script>
+
+    <!--Payment Gatway-->
+    <script src="https://js.instamojo.com/v1/checkout.js"></script>
+    <script>
+        /* Start client-defined Callback Handler Functions */
+        function onOpenHandler() {
+            alert('Payments Modal is Opened');
+        }
+
+        function onCloseHandler() {
+            alert('Payments Modal is Closed');
+        }
+
+        function onPaymentSuccessHandler(response) {
+            alert('Payment Success');
+            console.log('Payment Success Response', response);
+        }
+
+        function onPaymentFailureHandler(response) {
+            alert('Payment Failure');
+            console.log('Payment Failure Response', response);
+        }
+        /* End client-defined Callback Handler Functions */
+
+        /* Configuring Handlers */
+        Instamojo.configure({
+            handlers: {
+                onOpen: onOpenHandler,
+                onClose: onCloseHandler,
+                onSuccess: onPaymentSuccessHandler,
+                onFailure: onPaymentFailureHandler
+            }
+        });
+
+        function onButtonClick() {
+            Instamojo.open('https://www.instamojo.com/@yogesh_mundhra18');
+
+        }
+    </script>
 
 
 </body>
