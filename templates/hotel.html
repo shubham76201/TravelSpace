@@ -10,6 +10,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
 <style>
   .dropdown {
     color: red
@@ -33,6 +34,198 @@
   h6 {
     font-family: "Raleway", Arial, Helvetica, sans-serif
   }
+
+  .footer-copyright {
+    background: #f9f9f9;
+    padding: 0 0 60px;
+  }
+
+  .footer-content {
+    padding: 120px 0;
+    width: 720px;
+    height:480px;
+  }
+
+  .single-footer-item {
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+        
+  }
+
+  .single-footer-item h2 {
+    color: #565a5c;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 40px;
+  }
+
+  .footer-logo {
+    padding-top: 76px;
+  }
+
+  .footer-logo a,
+    .footer-logo a:hover,
+    .footer-logo a:focus {
+    color: #565a5c;
+    font-size: 24px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    font-weight: 600;
+    margin: 14px 0px 0;
+    padding: 10px 0 0 0;
+  }
+
+  .footer-logo a>span {
+    color: #00d8ff;
+    text-transform: capitalize;
+  }
+
+  .footer-logo p {
+    color: #aaa;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+  }
+
+  .single-footer-txt p {
+    margin-bottom: 8px;
+  }
+
+  p{
+    margin: 0px;
+    color:#666666;
+    font-size:14px;
+  }
+
+  .single-footer-txt p a {
+    color: #565a5c;
+    font-size: 16px;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -ms-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+  }
+
+  .single-footer-txt p a:hover {
+    -webkit-transition: scaleX(1.2);
+    -moz-transition: scaleX(1.2);
+    -ms-transition: scaleX(1.2);
+    -o-transition: scaleX(1.2);
+    transform: scaleX(1.2);
+    color: #00d8ff;
+  }
+
+
+
+
+  .footer-copyright hr {
+    border-top: 1px solid #ebebeb;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border:0;
+  }
+
+ 
+
+  .foot-icons {
+    text-align: center;
+    margin-top: 60px;
+  }
+
+  .foot-icons .footer-social-links li {
+    padding: 0 10px;
+    text-align: center;
+  }
+
+  .foot-icons .footer-social-links a {
+    color: #fff;
+    display: block;
+    font-size: 18px;
+    width: 60px;
+    line-height: 60px;
+    height: 60px;
+    border-radius: 50%;
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    -moz-transition: all 0.5s ease-in-out 0s;
+    -o-transition: all 0.5s ease-in-out 0s;
+    -ms-transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s;
+    border-radius: 50%;
+  }
+
+  .foot-icon-bg-1 {
+    background: #3b5999;
+  }
+
+  .foot-icon-bg-2 {
+    background: #1da1f3;
+  }
+
+  .foot-icon-bg-3 {
+    background: #8938ae;
+    background: -webkit-linear-gradient(right, #8938ae 0%, #c13181 100%);
+    background: -o-linear-gradient(right, #8938ae 0%, #c13181 100%);
+    background: linear-gradient(to right, #8938ae 0%, #c13181 100%);
+  }
+
+  .foot-icons .footer-social-links a:hover {
+    color: #2cdbb5;
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+
+  .foot-icons p {
+    color: #aaa;
+    font-size: 16px;
+    margin-top: 28px;
+  }
+
+  .foot-icons p a,
+  .foot-icons p a:hover,
+  .foot-icons p a:focus {
+    color: #00d8ff;
+    font-size: 16px;
+    margin-top: 28px;
+  }
+  
+
+        {% comment %} new edit {% endcomment %}
+  .container{
+    width: 750px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .row{
+    width: 750px;
+    height:240px;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  .col-sm-3{
+    width: 768px;
+          
+  }
+  .list-inline{
+    padding-left: 0;
+    margin-left: -5px;
+    list-style: none;
+  }
+
+  ul{
+    padding: 0;
+    margin: 0;
+  }
+  ul li{
+    display: inline-block;
+    list-style: none;
+  }
+
 </style>
 
 <body class="w3-light-grey">
@@ -84,7 +277,7 @@
     <img class="w3-image" src="https://www.wallpapertip.com/wmimgs/15-156963_hotel-chocolate-st-lucia.jpg"
       alt="The Hotel" style="min-width:1000px" width="1500" height="800">
     <div class="w3-display-left w3-padding w3-col l6 m8">
-      <div class="w3-container w3-red">
+      <div class="w3-container "  style="background-color: #00d8d5 !important">
         <h2><i class="fa fa-bed w3-margin-right"></i>Find Hotels</h2>
       </div>
       <div class="w3-container w3-white w3-padding-16">
@@ -171,16 +364,96 @@
   </div>
 
   <!-- Footer -->
-  <footer class="w3-padding-32 w3-black w3-center w3-margin-top">
-    <div class="w3-xlarge w3-padding-16">
-      <i class="fa fa-facebook-official w3-hover-opacity"></i>
-      <i class="fa fa-instagram w3-hover-opacity"></i>
-      <i class="fa fa-snapchat w3-hover-opacity"></i>
-      <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-      <i class="fa fa-twitter w3-hover-opacity"></i>
-      <i class="fa fa-linkedin w3-hover-opacity"></i>
-    </div>
-  </footer>
+  <footer class="footer-copyright">
+        <div class="container">
+            <div class="footer-content">
+                <div class="row">
+
+                    <div class="col-sm-3">
+                        <div class="single-footer-item">
+                            <div class="footer-logo">
+                                <a href="index.html">
+										Travel<span>Space</span>
+									</a>
+                                <p>
+                                    Future travel agency
+                                </p>
+                            </div>
+                        </div>
+                        <!--/.single-footer-item-->
+                    </div>
+                    <!--/.col-->
+
+                    <div class="col-sm-3">
+                        <div class="single-footer-item">
+                            <h2>link</h2>
+                            <div class="single-footer-txt">
+                                <p><a href="#">home</a></p>
+                                <p><a href="#">destination</a></p>
+                                <p><a href="#">packages</a></p>
+                                <p><a href="#">hotel</a></p>
+                                <p><a href="#">train</a></p>
+                                <p><a href="#">contacts</a></p>
+                            </div>
+                            <!--/.single-footer-txt-->
+                        </div>
+                        <!--/.single-footer-item-->
+                    </div>
+                    <!--/.col-->
+
+                    <div class="col-sm-3">
+                        <div class="single-footer-item">
+                            <h2>popular destination</h2>
+                            <div class="single-footer-txt">
+                                <p><a href="#">Goa</a></p>
+                                <p><a href="#">Kedarnath</a></p>
+                                <p><a href="#">Mumbai</a></p>
+                                <p><a href="#">Amritsar</a></p>
+                                <p><a href="#">Jaipur</a></p>
+                            </div>
+                            <!--/.single-footer-txt-->
+                        </div>
+                        <!--/.single-footer-item-->
+                    </div>
+                    <!--/.col-->
+
+                    <div class="col-sm-3">
+                        <div class="single-footer-item text-center">
+                            <h2 class="text-left">contacts</h2>
+                            <div class="single-footer-txt text-left">
+                                <p>+91 123 456 7890</p>
+                                <p class="foot-email"><a href="#">Travelspace@gmail.com</a></p>
+                                <p>NIIT University</p>
+                                <p>Neemrana, India</p>
+                            </div>
+                            <!--/.single-footer-txt-->
+                        </div>
+                        <!--/.single-footer-item-->
+                    </div>
+                    <!--/.col-->
+
+                </div>
+                <!--/.row-->
+
+            </div>
+            <!--/.footer-content-->
+            <hr>
+            <div class="foot-icons ">
+                <ul class="footer-social-links list-inline list-unstyled">
+                    <li><a href="#" target="_blank" class="foot-icon-bg-1"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#" target="_blank" class="foot-icon-bg-2"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#" target="_blank" class="foot-icon-bg-3"><i class="fa fa-instagram"></i></a></li>
+                </ul>
+                <p>&copy; 2021 <a href="#">TraveSpace</a>. All Right Reserved</p>
+
+            </div>
+            <!--/.foot-icons-->
+           
+        </div>
+        <!-- /.container-->
+    </footer>
+
+
 
   <!-- Add Google Maps -->
   <script>
