@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect
 from dbapp2.models import Signup
 from django.contrib.auth.models import User
-import requests
 import json
 # Create your views here.
 def signup(request):
