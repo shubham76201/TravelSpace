@@ -1,6 +1,9 @@
 from django.shortcuts import render, redirect
 from dbapp2.models import Signup
+from dbapp2.models import Locations
+from dbapp2.models import Train
 from django.contrib.auth.models import User
+import requests
 import json
 # Create your views here.
 def signup(request):
@@ -49,9 +52,22 @@ def train1(request):
     response = requests.request("POST", url, data=payload, headers=headers)
 
     y=json.loads(response.text)
-    print(y[0]['train_num'])
+    context={'y1':y}
+    #print(y[0]['train_num'])
 
-    return render(request,'train1.html', context={'temp' : y[4]['name'], 'temp2': ['a','b','c']})
+    return render(request,'train1.html',context)
+    #, context={'temp' : y[4]['name']})
 
 def train(request):
-    return render(request, 'train.html')
+    if request.method=="POST":
+      Source = request.POST.get('from')
+      To = request.POST.get('to')
+      date = request.POST.get('CheckIn')
+      obj = Locations.objects.create(Source=Source,destination=To,Date=date)
+      uploads = Train.objects.filter(Train_No=10222)
+      
+      return render(request, 'Ticket.html', {'upload':uploads})
+      
+    else:
+        return render(request, 'train.html')
+

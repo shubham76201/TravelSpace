@@ -43,3 +43,20 @@ def contact(request):
         contact.save()
         messages.success(request, ' Profile details updated.')
     return render(request,'contact.html')
+
+def train1(request):
+    url = "https://trains.p.rapidapi.com/"
+
+    payload = "{\r\"search\": \"Rajdhani\"\r}"
+    headers = {
+        'content-type': "application/json",
+        'x-rapidapi-key': "aed6b86374mshef490530de895fcp135547jsnb0954a5a6d1b",
+        'x-rapidapi-host': "trains.p.rapidapi.com"
+        }
+
+    response = requests.request("POST", url, data=payload, headers=headers)
+
+    y=json.loads(response.text)
+    print(y[0]['train_num'])
+
+    return render(request,'train1.html', context={'temp' : y[4]['name']})
