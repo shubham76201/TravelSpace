@@ -22,13 +22,8 @@ admin.site.index_title = 'Welcome To Travel Space Admin Panel'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("index", include('home.urls')),
-    path("about",include('home.urls')),
-    path("service",include('home.urls')),
-    path("contact",include('home.urls')),
-    path("",include('frontapp.urls')),
+    path("",include('dbapp2.urls')),
     path("dbapp2/",include('dbapp2.urls')),
-    path("dbapp1/",include('dbapp1.urls')),
-    path("dbapp3/",include('dbapp3.urls')),
+    
 ]
 

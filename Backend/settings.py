@@ -31,7 +31,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'home',
     'dbapp2.apps.Dbapp2Config',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -39,8 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'frontapp',
-    'hotel',
     
     
 ]
@@ -82,7 +79,7 @@ WSGI_APPLICATION = 'Backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'Travelspace',
+        'NAME': 'Travelspace1',
         'USER': 'postgres',
         'PASSWORD': 'shubham',
         'HOST': 'localhost'

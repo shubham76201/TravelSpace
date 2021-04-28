@@ -3,8 +3,10 @@ from dbapp2.models import Signup
 from dbapp2.models import Locations
 from dbapp2.models import Train
 from django.contrib.auth.models import User
+from django.contrib import auth
 import requests
 import json
+
 # Create your views here.
 def signup(request):
     if request.method=="POST":
@@ -17,13 +19,16 @@ def signup(request):
         x=User.objects.create_user(username=username,first_name=first_name,last_name=last_name,email=email,password=password)
         x.save()
         print("User Created")
-        return redirect('/')
+        return redirect('index')
 
     else:
       return render(request,'signup.html')
 
 def index(request):
     return render(request, 'index.html')
+
+def index1(request):
+    return render(request, 'LandingPage.html')
 
 def contact(request):
     if request.method == "POST":
@@ -70,4 +75,61 @@ def train(request):
       
     else:
         return render(request, 'train.html')
+
+def logout(request):
+    auth.logout(request)
+    return redirect('/')
+
+def index1(request):
+    return render(request,'LandingPage.html')
+
+def signin(request):
+    if request.method=="POST":
+      username1=request.POST['uname']
+      password1=request.POST['psw'] 
+
+      user = auth.authenticate(username=username1,password=password1)
+      if user is not None:
+          auth.login(request,user)
+          return redirect('/')
+      else:
+        return redirect('signin')
+        #return render(request,'LandingPage.html', context={'temp4' : username1})
+    else:
+         return render(request,'index.html')
+
+def signup(request):
+    if request.method=="POST":
+        username= request.POST.get('username1')
+        first_name= request.POST.get('firstname1')
+        last_name= request.POST.get('lastname1')
+        email= request.POST.get('email')
+        password= request.POST.get('password')
+        
+        x=User.objects.create_user(username=username,first_name=first_name,last_name=last_name,email=email,password=password)
+        x.save()
+        print("User Created")
+        return redirect('/')
+
+    else:
+      return render(request,'signup.html')
+
+
+
+def train1(request):
+    url = "https://trains.p.rapidapi.com/"
+
+    payload = "{\r\"search\": \"Rajdhani\"\r}"
+    headers = {
+        'content-type': "application/json",
+        'x-rapidapi-key': "aed6b86374mshef490530de895fcp135547jsnb0954a5a6d1b",
+        'x-rapidapi-host': "trains.p.rapidapi.com"
+        }
+
+    response = requests.request("POST", url, data=payload, headers=headers)
+
+    y=json.loads(response.text)
+    print(y[0]['train_num'])
+
+    return render(request,'train1.html', context={'temp' : y[4]['name']})
 
