@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'style1.css' %}">{% endblock css %}
+{% block tag1 %}<li><a href="login/signin">Sign-in </a></li> {% endblock tag1 %}
+{% block content %}
+
+<body class=" body1">
+    <div class="container" id="container">
+
+        <div class="form-container sign-in-container">
+            <form action="signup" method="post">
+                {% csrf_token %}
+                <h1>SIGN UP </h1>
+                
+                <span>or use your account</span>
+
+                <input type="name" placeholder="Name" name="firstname1" />
+                <input type="name" placeholder="Username" name="username1" />
+                <input type="name" placeholder="Lastname" name="lastname1" />
+                <input type="email" placeholder="Email" name="email"/>
+                <input type="phone" placeholder="Phone no." name="phone"/>
+                <input type="password" placeholder="Password" name="password" />
+                
+                    <button>Sign Up</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p>To keep connected with us please login with your personal info</p>
+                    <button class="ghost" id="signIn">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                     
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    {% endblock content %}

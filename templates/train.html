@@ -1,0 +1,194 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block tag1 %}<li><a href="login/signin">Sign-in </a></li> {% endblock tag1 %}
+      {% block css%}
+      <link rel="stylesheet" href="{% static 'style1.css' %}">
+      <link rel= "stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <link rel="stylesheet" href="{% static 'style6.css' %}">
+      <link rel= "stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <link rel="shortcut icon" type="image/icon" href="{% static 'assets/logo/Logo.jpg' %}" />
+      <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
+      <!-- favicon img -->
+      <link rel="shortcut icon" type="image/icon" href="https://github.com/shubham76201/Sign_Up/blob/master/fav.png?raw=true" />
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <script src={% static 'script1.js' %}></script>
+      {% endblock css%}
+      
+  </head>
+
+{% block content %}
+
+  <body>
+    
+
+  <header class="w3-display-container w3-content" style="max-width:1500px;">
+    <img class="w3-image"  src="https://www.tripsavvy.com/thmb/S8Iex-xm8YpPbWR6gbVav-e3hgw=/3910x2546/filters:fill(auto,1)/the-rocky-mountaineer-tourist-passenger-train-at-morant-s-curve-on-the-cpr-line-along-the-bow-river-near-lake-louise-in-banff-national-park--alberta--canada--75470371-5b081762ff1b7800368b960f.jpg"
+      alt="The Hotel" style="min-width:1000px; border-radius: 6px;" >
+    <div class="w3-display-left w3-padding w3-col l6 m8">
+      <div class="w3-container " style="background-color: #00d8d5 !important">
+        <h2 id="book-tr">Book Your Train</h2>
+      </div>
+      <div class="w3-container w3-white w3-padding-24">
+
+        <form action="train" method="POST" >
+          {% csrf_token %}
+          <div class="w3-row-padding" style="margin:0 -16px;">
+            <div class="w3-half w3-margin-bottom">
+              
+              <div class="w3-dropdown-click">
+              <div id="Demo">
+                <label style="margin: 2px;">From</label>
+                <select class="w3-input w3-border" name="from" id="">
+                  <option value="" disabled selected>--Choose Your Source Place--</option>
+                  <option value="Delhi">Delhi</option>
+                  <option value="Mumbai">Mumbai</option>
+                  <option value="Goa">Goa</option>
+                  <option value="Vadodara">Vadodara</option>
+                  <option value="Bhubaneshwar">Bhubaneshwar</option>
+                  <option value="Amritsar">Amritsar</option>
+                  <option value="Pune">Pune</option>
+
+                </select>
+                
+              </div>
+              </div>
+            </div>
+            <div class="w3-half w3-margin-bottom">
+              <label style="margin: px;">To</label>
+              <div class="w3-dropdown-click">
+              <div id="Demo">
+                <select class="w3-input w3-border" name="to" id="">
+                  <option value="Delhi" disabled selected>--Choose Your Dests Place--</option>
+                  <option value="Delhi">Delhi</option>
+                  <option value="Mumbai">Mumbai</option>
+                  <option value="Goa">Goa</option>
+                  <option value="Vadodara">Vadodara</option>
+                  <option value="Bhubaneshwar">Bhubaneshwar</option>
+                  <option value="Amritsar">Amritsar</option>
+                  <option value="Pune">Pune</option>
+
+                </select>
+                
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="w3-half">
+              <label style="margin: 4px;">Date</label>
+              <input class="w3-input w3-border" type="date" placeholder="CheckIn" name="CheckIn" required>
+          </div>
+          <br><br><br><br>
+          <button class="w3-button w3-dark-grey" type="submit"> Search Trains</button>
+        </form>
+      </div>
+    </div>
+  </header>
+  <br />
+
+  <div class="container"> 
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card">
+          <img src="https://c.files.bbci.co.uk/F76E/production/_115224336_mediaitem115224335.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Book Confirmed Train Tickets </h5><hr>
+            <p class="card-text">with the Nearby Station features! Get live PNR status updates,enjoy easy cancellation & more</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://media.kasperskydaily.com/wp-content/uploads/sites/92/2015/12/06023356/train-hack-featured-1.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Enjoy Zero Service Fees on Train Bookings!</h5><hr>
+            <p class="card-text">Save big, Travel more.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://imgeng.jagran.com/images/2020/mar/trainrail1584724002639.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">List of Cancelled Traing by Indian Railway</h5><hr>
+            <p class="card-text">Click to check now, plan better, plan smart.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br />
+
+  <hr class="break">
+
+  
+  <div class="row-p">
+    <div class="col-4">
+      <h2 style="margin-bottom: 24px; font-weight: bold;">Payment Partners</h2>
+      <p>We are partnering with the most reliable payment service providers to make sure every transaction is smooth and worry-free!</p>
+    </div>
+    <div class="flex-container">
+      <div class="flex-item">
+        <a href=#><img src="https://tukuz.com/wp-content/uploads/2020/10/razorpay-logo-vector.png" alt="paytm" class="img-responsive"></a>
+      </div>
+      <div class="flex-item">
+        <a href=#><img src="https://www.visionbanks.com/wp-content/uploads/gpay_logo.png" alt="Gpay" class="img-responsive"></a>
+      </div>
+      <div class="flex-item">
+        <a href=#><img src="https://cdn0.iconfinder.com/data/icons/flat-design-business-set-3/24/payment-method-visa-512.png" alt="visa" class="img-responsive"></a>
+      </div>
+      <div class="flex-item">
+        <a href=#><img src="https://cdn.iconscout.com/icon/free/png-512/mastercard-10-226450.png" alt="mc" class="img-responsive"></a>
+      </div>
+      
+      <div class="flex-item">
+          <a href=#><img src="https://sutrashome.files.wordpress.com/2019/04/bhim.jpg" alt="upi" class="img-responsive"></a>
+      </div>
+    </div>
+  </div>
+  
+  <hr class="break">
+
+  <h2 style="text-align:center;">FAQ's<h2>
+
+  <div class = "container-md">
+    <article class ="faq-container">
+      <div class="about">
+        <p class="questions">Q. Why Book Train Tickets Online With Us?</p>
+        <div class= "acc-answers">
+          <p class="answers">A.TravelSpace, India's leading travel portal is the best way to book train tickets online. No matter where you are in the country, make a hassle-free railway reservation from us using your computer or smartphone. Along with it, you can avail exciting discounts on your first time of booking but also get them on the following rail tickets. Additionally, you will have all the updated information of the seats and classes of trains that are available to book.</p>
+        </div>
+        <br/>
+        <p class="questions">Q. What is the process for booking online train tickets?</p>
+        <div class= "acc-answers">
+          <p class="answers">A. For booking train tickets from TravelSpace, enter the name of the city, station name or station code of the cities you will depart from and arrive at. From the updated list of trains available, choose your preferred class of travel. While making the railway reservation on our app or website, you would need to add your IRCTC username. This verification process is important. It makes sure that your</p>
+        </div>
+        <br/>
+        <p class="questions">Q. Are children charged for train tickets booking?</p>
+        <div class= "acc-answers">
+          <p class="answers">A. Children under five years of age are not charged for train reservation. However, the full fare is charged for those between five to 12 years of age. The charge is only applicable if, at the time of reservation, a berth is sought for the child separately. Then again, if there is no seat or berth sought for the child who is between the abovementioned age group, only half of the adult fare will be charged.</p>
+        </div>
+         <br/>
+        <p class="questions">Q. What documents or ID Cards required for online train ticket booking?</p>
+        <div class= "acc-answers">
+          <p class="answers">A. While you are booking your railway ticket online, you are not required to provide any photo identity card detail. However, you would need to carry one of the identity cards while you are travelling, which includes, Voter photo identity card that has been issued by the Election Commission of India, Passport, Driving Licence that has been issued by RTO, PAN Card that has been issued by Income Tax Department, Student Identity Card with the student's photograph issued by the school or college, National Bank Passbook with photographs, Credit Cards issued by banks with laminated photographs & Aadhaar Card.</p>
+        </div>
+        <br/>
+      </div>
+    </article>
+  </div>
+
+
+
+   
+  </body>
+{% endblock content %}
+
+
+</html>
