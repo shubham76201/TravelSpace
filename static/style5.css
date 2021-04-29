@@ -1,0 +1,296 @@
+.body{
+    font-family: 'Poppins';
+    font-weight: 400;
+  }
+
+  #book-tr{
+    text-align: center;
+  }
+
+  .w3-border{
+    border: 0px;
+    outline: 0px;
+  }
+
+  .container{
+    box-shadow:  0px 8px 8px rgba(75, 75, 75, 0.534);
+    position: relative;
+  }
+
+  .col{
+    box-shadow:  0px 8px 8px rgba(75, 75, 75, 0.534);
+    padding: 20px;
+  }
+
+  .card-title{
+    font-weight: bold;
+
+  }
+
+  .card-text{
+    color: grey;
+  }
+
+  hr{
+    height: 1px;
+    margin-right: 250px;
+    background-color: red;
+  }
+
+  .card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+  }
+
+  .break{
+    height: 0.5px;
+    background-color: grey;
+    margin: 40px 250px 40px 250px ;
+  }
+
+  .row-p{
+    flex-wrap: nowrap;
+    display: flex;
+    margin-left: 12px;
+    margin-right: 12px;
+    
+    
+  }
+  .col-4{
+    position: relative;
+    float: left;
+    box-sizing: border-box;
+    margin-right: 70px;
+    padding-left: 200px;
+    min-height: 1px;
+  }
+  
+  .flex-container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  .flex-item{
+    margin: 20px;
+  }
+
+  .img-responsive{
+    width: 85px;
+    height: 55px;
+  }
+
+  .questions{
+    letter-spacing: .31px;
+    margin-bottom:25px;
+    line-height: 22px !important;
+    font-weight: bold;
+    color: black;
+    font-size: 14px;
+  }
+
+  .acc-answers{
+    box-sizing: border-box;
+  }
+
+  .answers{
+    letter-spacing: .23px;
+    line-height: 17px !important;
+    font-size: 12px;
+    color: grey;
+  }
+
+  {% comment %} FOOTER {% endcomment %}
+
+  .footer-copyright {
+    background: #f9f9f9;
+     padding: 0 0 60px;
+  }
+
+  .footer-content {
+      padding: 120px 0;
+      width: 720px;
+      height:480px;
+  }
+
+  .single-footer-item {
+      font-family: 'Poppins', sans-serif;
+      text-transform: capitalize;
+  
+  }
+
+  .single-footer-item h2 {
+      color: #565a5c;
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 40px;
+  }
+
+  .footer-logo {
+      padding-top: 76px;
+  }
+
+  .footer-logo a,
+  .footer-logo a:hover,
+  .footer-logo a:focus {
+      color: #565a5c;
+      font-size: 24px;
+      font-family: 'Poppins', sans-serif;
+      text-transform: capitalize;
+      font-weight: 600;
+      margin: 14px 0px 0;
+      padding: 10px 0 0 0;
+  }
+
+  .footer-logo a>span {
+      color: #00d8ff;
+      text-transform: capitalize;
+  }
+
+  .footer-logo p {
+      color: #aaa;
+      font-size: 16px;
+      font-family: 'Poppins', sans-serif;
+      text-transform: capitalize;
+  }
+
+  .single-footer-txt p {
+      margin-bottom: 8px;
+  }
+
+  p{
+    margin: 0px;
+    color:#666666;
+    font-size:14px;
+  }
+
+  .single-footer-txt p a {
+      color: #565a5c;
+      font-size: 16px;
+      -webkit-transition: .5s ease-in-out;
+      -moz-transition: .5s ease-in-out;
+      -ms-transition: .5s ease-in-out;
+      -o-transition: .5s ease-in-out;
+      transition: .5s ease-in-out;
+  }
+
+  .single-footer-txt p a:hover {
+      -webkit-transition: scaleX(1.2);
+      -moz-transition: scaleX(1.2);
+      -ms-transition: scaleX(1.2);
+      -o-transition: scaleX(1.2);
+      transform: scaleX(1.2);
+      color: #00d8ff;
+  }
+
+
+
+
+  .footer-copyright hr {
+      border-top: 1px solid #ebebeb;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      border:0;
+  }
+
+
+
+
+  .foot-icons {
+      text-align: center;
+      margin-top: 60px;
+  }
+
+  .foot-icons .footer-social-links li {
+      padding: 0 10px;
+      text-align: center;
+  }
+
+  .foot-icons .footer-social-links a {
+      color: #fff;
+      display: block;
+      font-size: 18px;
+      width: 60px;
+      line-height: 60px;
+      height: 60px;
+      border-radius: 50%;
+      -webkit-transition: all 0.5s ease-in-out 0s;
+      -moz-transition: all 0.5s ease-in-out 0s;
+      -o-transition: all 0.5s ease-in-out 0s;
+      -ms-transition: all 0.5s ease-in-out 0s;
+      transition: all 0.5s ease-in-out 0s;
+      border-radius: 50%;
+  }
+
+  .foot-icon-bg-1 {
+      background: #3b5999;
+  }
+
+  .foot-icon-bg-2 {
+      background: #1da1f3;
+  }
+
+  .foot-icon-bg-3 {
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#8938ae+0,c13181+100 */
+      background: #8938ae;
+      /* Old browsers */
+      background: -webkit-linear-gradient(right, #8938ae 0%, #c13181 100%);
+      background: -o-linear-gradient(right, #8938ae 0%, #c13181 100%);
+      background: linear-gradient(to right, #8938ae 0%, #c13181 100%);
+  }
+
+  .foot-icons .footer-social-links a:hover {
+      /*color: #00d8d5;*/
+      color: #2cdbb5;
+      -webkit-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      transform: rotate(360deg);
+  }
+
+  .foot-icons p {
+      color: #aaa;
+      font-size: 16px;
+      margin-top: 28px;
+  }
+
+  .foot-icons p a,
+  .foot-icons p a:hover,
+  .foot-icons p a:focus {
+      color: #00d8ff;
+      font-size: 16px;
+      margin-top: 28px;
+  }
+  .fa{
+    display:inline-block;
+    font: normal normal normal 14px/1 fontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    
+  }
+
+  .container-foot{
+    width: 750px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .row-foot{
+    width: 750px;
+    height:240px;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  .col-sm-3{
+    width: 768px;
+    
+  }
+  .list-inline{
+    padding-left: 0;
+    margin-left: -5px;
+    list-style: none;
+  }
