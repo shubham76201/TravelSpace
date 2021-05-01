@@ -2,8 +2,11 @@
 * {
 	box-sizing: border-box;
 }
+.text {
+	font-size:large;
+}
 body {
-	font-family: 'Montserrat', sans-serif;
+	/* font-family: 'Ubuntu Condensed', sans-serif; */
 	line-height: 1.6;
 	margin: 0;
 	min-height: 100vh;

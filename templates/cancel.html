@@ -1,0 +1,85 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Train Schedule
+{% endblock %}
+{% block tag1 %}
+     
+     
+      <a href=""><button class="btn btn-outline-primary">Hi,{{request.user}}</button></a>{% endblock tag1 %}
+{% block css %}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+<style>
+    body {
+        font-family: 'Ubuntu Condensed', sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        min-height: 100vh;
+        justify-content: left;
+        background-color: rgb(95, 206, 206);
+        
+    }
+    .info1{
+        margin-left: 100px;
+        width:1300px;
+        justify-content: left;
+        border: 2px solid black;
+        border-radius: 2px;
+        font-size: 10px;
+        background-color:rgb(175, 216, 216)
+        
+    }
+</style>
+{% endblock %}
+         
+{%block content%}
+<h1 style="text-align:center;font-family:sans-seriff; color: rgb(14, 15, 15);">Current Reservations</h1>
+<div class="info1">
+    
+
+    {%csrf_token%}
+    <div class="container">
+    {% for i in res %}
+        <div class="tick" style="font-size:25px;color:rgb(20, 20, 20);padding:10px;padding-left:40px;">
+
+            <b>Date    </b>   :{{i.date}}<br/>
+            <b>Train no</b>   :{{i.tno}}<br/>
+            <b>PNR     </b>   :{{i.pnr}}<br/>
+            <b>Src     </b>   :{{i.src}}<br/>
+            <b>Des     </b>   :{{i.des}}<br/>
+                            <button class="btn btn-danger" value="{{i.pnr}}" style="float:right;width:200px" onclick="y(this.value)"type="submit">Cancel</button><br/>
+
+        </div>
+            <br/><br/>
+        {%endfor%}
+
+</div>
+</div>
+    
+
+     <script>
+     function y(vl)
+    {
+
+
+
+        $.ajax({
+            type:'POST',
+            url:'cancel/cn/',
+            data:{
+                    id:vl,
+                    csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+
+                  },
+        success:function(data){
+
+            alert("Cancelled Tickets||Amount Refunded:"+data);
+            window.location.href=window.location.href;
+                               }
+            }
+                )
+
+    }
+    </script>
+{%endblock%}

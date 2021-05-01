@@ -1,0 +1,169 @@
+{% extends 'base.html' %}
+{% block title %}Availibility
+{% endblock %}
+{% block css %}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+<style>
+    body {
+        font-family: 'Ubuntu Condensed', sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        min-height: 100vh;
+        background-color: rgb(211, 214, 218);
+        
+    }
+    
+</style>
+{% endblock css %}
+{% block tag1 %}
+     
+     <a href="schedule"><button class="btn btn-info">Check Schedule</button></a>
+     <a href="pnr"><button class="btn btn-warning">Check PNR</button></a>
+     <a href="cancel"><button class="btn btn-danger">Cancel Seat</button></a>
+     <a href=""><button class="btn btn-outline-primary"> Hi, {{request.user}}</button></a>{% endblock tag1 %}
+     
+{%block content%}
+
+<header class="w3-display-container w3-content" style="max-width:1500px;"></header>
+{%csrf_token%}
+<h2 style="text-align:center;"><span class="sty">Search for Availability in Trains</span></h2>
+<br />
+<br />
+<br />
+
+<center>
+    <form class="tform1" style="margin-top: 0px;" action="book1/" method="POST">
+        {%csrf_token%}
+        <div class="hd" style="margin-left: 0px;">
+            <table>
+                <th style="font-size: 20px;">Source </th>
+                <th style="width: 185px;">       </th>
+                <th>  </th>
+                <th style="font-size: 20px;">Destination</th>
+            </table>
+            <input class="btn btn-warning" style="font-size:20px;font-weight:bolder" type=" text" value="{{src}}" name="src" readonly><span
+                style="color: white; margin-right:55px;">
+            </span> </span><input class="btn btn-warning" style="font-size:20px;font-weight:bolder" type=" text" value="{{des}}" name="des" readonly><br /></br>
+            
+            
+        </div>
+        <b style="color: white;margin-left:10px">DATE OF JOURNEY:</b> <input class="btn btn-light type=" value="{{date}}"
+                id="dt" name="date" readonly><br />
+        <h1 id="123"></h1>
+        <span hidden id="od">{{o}}</span>
+              
+            <!-- <table style="font-size: 30px">
+                <p style="font-size: 20px;font-weight: bold;">Trains Available</p> 
+                
+                      {% for j in tna %}
+                           <th style="padding:10px;">
+                      <h6><b>{{j}}</b></h6></th>
+                      {% endfor %}
+                       {% for i in b %}
+                       <th >
+                           
+                           <h6><b> --> Arrival Time {{i}}</b></h6></th>
+                       
+                       {% endfor %}
+                      </tr>
+                
+                                     
+                
+            </table> -->
+        <table style="margin-left:50px;font-size:20px;color:black;" class="table-striped table-borderless table-hover">
+            <tr class="sty" style="color:black;padding:10px;">
+                
+                <th style="padding:10px;">Train Number</th>
+                <th style="padding:10px;">Departure Station</th>
+                <th style="padding:10px;">Arrival Station</th>
+                <th style="padding:10px;">Departure Time</th>
+                
+                <th style="padding:10px;">Select Class</th>
+                <th style="padding:10px;">Availibility</th>
+                <th style="padding:10px;">Fare/Seats</th>
+                <th style="padding:10px;">No of Seats</th>
+                <th style="padding:10px;">Book</th>
+            </tr>
+            
+            {% for i in data %} 
+              
+            <tr>
+                
+                <td style="padding:15px;">
+                    <h5><b>{{i.tno}}</b></h5>
+                </td>
+                
+                
+                </td>
+                
+                <td style="padding:15px;">
+                    <h5><b>{{i.sid}}<b /></h5>
+                </td>
+                <td style="padding:15px;">
+                    <h5><b>{{des}}<b /></h5>
+                </td>
+                <td style="padding:15px;">
+                    <h5><b>{{i.atime}}</b></h5>
+                </td>
+                <td>
+                    <h6>
+                        <select  class="btn btn-light" id="{{i.tno}}" onchange="x(this.value,this.id)" name="cls{{i.tno}}">
+                            <option value="NONE">NONE</option>
+                            <option value="AC">AC</option>
+                            <option value="2S">2S</option>
+                            <option value="3A">3A</option>
+                            <option value="SL">SL</option>
+                        </select>
+                    </h6>
+                </td>
+                <td>
+                    <h6 class="btn btn-outline-success" id="{{i.tno}}1"></h6>
+                </td>
+                <td><input id="{{i.tno}}p1" style="margin-bottom:10px" class="btn btn-info" type="text" name="price{{i.tno}}" value="" readonly> </h6>
+                </td>
+                <td><input type="number" style="margin-bottom:10px" class="btn btn-info" id="{{i.tno}}-2" name="nos{{i.tno}}" /></td>
+                <td>
+                    <button type="submit" style="margin-bottom:10px" class="btn btn-outline-success" value="{{i.tno}}" name="bk">Book Seat</button>
+                </td>
+            </tr>
+            
+
+{% endfor %}
+            
+        </table>
+
+        <br /><br /><br />
+    </form>
+</center>
+</header>
+<script>
+    function x(vl, z) {
+
+        var da = document.getElementById('dt').value;
+        var o = document.getElementById('od').innerHTML;
+        $.ajax({
+            type: 'POST',
+            url: 'search/trains/cva/',
+            data: {
+                tno: z,
+                cls: vl,
+                od: o,
+                dt: da,
+                csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val()
+
+            },
+            success: function (data) {
+                var read = data.read;
+                var price = data.price;
+                $('#' + z + '1').html(data.read + " Seats");
+
+                $('#' + z + 'p1').val(price);
+            }
+        }
+        )
+    }
+</script>
+
+
+{%endblock%}

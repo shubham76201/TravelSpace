@@ -1,7 +1,13 @@
 
         .body{
-            font-family: 'Poppins';
-            font-weight: 400;
+          position: relative;
+          font-size: 14px;
+          color: #222222;
+          background: #fff;
+          font-family: 'Ubuntu Condensed', sans-serif;
+          max-width: 1920px;
+          margin: 0 auto;
+          overflow-x: hidden;
           }
   
           #book-tr{

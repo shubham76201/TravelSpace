@@ -2,13 +2,32 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block tag1 %}<li><a href="login/signin">Sign-in </a></li> {% endblock tag1 %}
+{% block tag1 %}
+
+
+{% if request.user.is_superuser %}
+    <a href="addT"><button class="btn btn-info">Add Trains</button></a>
+    <a href="addST"><button class="btn btn-primary">Add Stations</button></a>
+    <a href="addR"><button class="btn btn-warning">Add Route</button></a>
+    <a href="addRT"><button class="btn btn-success">Add Route Station</button></a>
+
+    {% endif %}
+     
+     <a href="schedule"><button class="btn btn-info">Check Schedule</button></a>
+     <a href="pnr"><button class="btn btn-warning">Check PNR</button></a>
+     <a href="cancel"><button class="btn btn-danger">Cancel Seat</button></a>
+     <a href=""><button class="btn btn-outline-primary">  Hi,  {{request.user}}</button></a>
+     
+ {% endblock tag1 %}
+ 
       {% block css%}
-      <link rel="stylesheet" href="{% static 'style1.css' %}">
-      <link rel= "stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
       <link rel="stylesheet" href="{% static 'style6.css' %}">
+      <link rel= "stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      
       <link rel= "stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -18,6 +37,18 @@
       <link rel="shortcut icon" type="image/icon" href="https://github.com/shubham76201/Sign_Up/blob/master/fav.png?raw=true" />
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
       <script src={% static 'script1.js' %}></script>
+      <style>
+        .body{
+          position: relative;
+          font-size: 14px;
+          color: #222222;
+          background: #fff;
+          font-family: 'Ubuntu Condensed', sans-serif;
+          max-width: 1920px;
+          margin: 0 auto;
+          overflow-x: hidden;
+          }
+      </style>
       {% endblock css%}
       
   </head>
@@ -26,17 +57,17 @@
 
   <body>
     
-
+    
   <header class="w3-display-container w3-content" style="max-width:1500px;">
     <img class="w3-image"  src="https://www.tripsavvy.com/thmb/S8Iex-xm8YpPbWR6gbVav-e3hgw=/3910x2546/filters:fill(auto,1)/the-rocky-mountaineer-tourist-passenger-train-at-morant-s-curve-on-the-cpr-line-along-the-bow-river-near-lake-louise-in-banff-national-park--alberta--canada--75470371-5b081762ff1b7800368b960f.jpg"
       alt="The Hotel" style="min-width:1000px; border-radius: 6px;" >
     <div class="w3-display-left w3-padding w3-col l6 m8">
       <div class="w3-container " style="background-color: #00d8d5 !important">
-        <h2 id="book-tr">Book Your Train</h2>
+        <h2 class="h2" id="book-tr"> <b>Book Your Train</b> </h2>
       </div>
       <div class="w3-container w3-white w3-padding-24">
 
-        <form action="train" method="POST" >
+        <form action="trains" method="POST" >
           {% csrf_token %}
           <div class="w3-row-padding" style="margin:0 -16px;">
             <div class="w3-half w3-margin-bottom">
@@ -60,7 +91,7 @@
               </div>
             </div>
             <div class="w3-half w3-margin-bottom">
-              <label style="margin: px;">To</label>
+              <label style="margin: px;">To</label><br>
               <div class="w3-dropdown-click">
               <div id="Demo">
                 <select class="w3-input w3-border" name="to" id="">
@@ -82,7 +113,7 @@
 
           <div class="w3-half">
               <label style="margin: 4px;">Date</label>
-              <input class="w3-input w3-border" type="date" placeholder="CheckIn" name="CheckIn" required>
+              <input class="w3-input w3-border" type="date" placeholder="CheckIn" name="date" required>
           </div>
           <br><br><br><br>
           <button class="w3-button w3-dark-grey" type="submit"> Search Trains</button>

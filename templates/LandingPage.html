@@ -72,11 +72,12 @@
                                     <li>
                                         <a href="#pack">Packages </a>
                                     </li>
-                                    <li>
-                                        <a href="train">Trains Booking</a>
-                                    </li>
+
 
                                     {% if user.is_authenticated %}
+                                    <li>
+                                        <a href="search">Trains Booking</a>
+                                    </li>
                                     <li>
                                         <a href="#">Hi,<b>{{user}}</b></i></a>
                                     </li>
@@ -146,6 +147,11 @@
                                 <li role="presentation">
                                     <a href="#flights" aria-controls="flights" role="tab" data-toggle="tab">
                                         <i class="fa fa-plane"></i> flights
+                                    </a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#Trains" aria-controls="flights" role="tab" data-toggle="tab">
+                                        <i class="fa fa-train"></i>Trains
                                     </a>
                                 </li>
                             </ul>
@@ -479,6 +485,121 @@
                                         </div>
                                     </div>
                                 </div>
+                            
+                                <div role="tabpanel" class="tab-pane fade in" id="Trains">
+                                <form action="search/trains" method="POST" >
+                                    {% csrf_token %}
+                                    <div class="tab-para">
+                                        
+                                        <div class="trip-circle">
+
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4 col-sm-12">
+                                                <div class="single-tab-select-box">
+                                                    <h2>From</h2>
+                                                    <div class="travel-select-icon">
+                                                        <select class="form-control" name="from">
+                                                            <option value="" disabled selected>--Choose Your Source Place--</option>
+                                                            <option value="Delhi">Delhi</option>
+                                                            <option value="Mumbai">Mumbai</option>
+                                                            <option value="Goa">Goa</option>
+                                                            <option value="Vadodara">Vadodara</option>
+                                                            <option value="Bhubaneshwar">Bhubaneshwar</option>
+                                                            <option value="Amritsar">Amritsar</option>
+                                                            <option value="Pune">Pune</option>
+                                                            <option value="Raipur">Raipur</option>
+                                                            <option value="Jaipur">Jaipur</option>
+                                                            
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-3 col-sm-4">
+                                                <div class="single-tab-select-box">
+                                                    <h2>departure</h2>
+                                                    <div class="travel-check-icon">
+                                                        
+                                                     <input type="text" name="date" class="form-control"
+                                                                data-toggle="datepicker">
+                                                    
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- <div class="col-lg-2 col-md-1 col-sm-4">
+                                                <div class="single-tab-select-box">
+                                                    <h2>adults</h2>
+                                                    <div class="travel-select-icon">
+                                                        <select class="form-control ">
+                                                            <option value="default">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-1 col-sm-4">
+                                                <div class="single-tab-select-box">
+                                                    <h2>childs</h2>
+                                                    <div class="travel-select-icon">
+                                                        <select class="form-control ">
+                                                            <option value="default">1</option>
+                                                            <option value="0">0</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div> -->
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4 col-sm-12">
+                                                <div class="single-tab-select-box">
+                                                    <h2>to</h2>
+                                                    <div class="travel-select-icon">
+                                                        <select class="form-control " name="to">
+                                                            <option value="Delhi" disabled selected>--Choose Your Dests
+                                                                Place--</option>
+                                                            <option value="Delhi">Delhi</option>
+                                                            <option value="Mumbai">Mumbai</option>
+                                                            <option value="Goa">Goa</option>
+                                                            <option value="Vadodara">Vadodara</option>
+                                                            <option value="Bhubaneshwar">Bhubaneshwar</option>
+                                                            <option value="Amritsar">Amritsar</option>
+                                                            <option value="Pune">Pune</option>
+                                                            <option value="Raipur">Raipur</option>
+                                                            <option value="Jaipur">Jaipur</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- <div class="col-lg-3 col-md-3 col-sm-4">
+                                                <div class="single-tab-select-box">
+                                                    <h2>class</h2>
+                                                    <div class="travel-select-icon"> -->
+                                            <!-- <select class="form-control "> -->
+                                            <!-- <option value="default">enter class</option> -->
+                                            <!-- <!-- <option value="Economy">Economy</option> 
+                                                            <!-- <!-- <option value="First">First</option> -->
+                                            <!-- <!-- <option value="Business"> Business</option> -->
+                                            <!-- </select>
+                                                    </div>
+                                                </div>
+                                            </div> -->
+                                            <div class="clo-sm-5">
+                                                <div class="about-btn pull-right">
+                                                    <!-- <button class="about-view travel-btn">
+                                                        search
+                                                    </button> -->
+                                                    <input class="about-view travel-btn" type="submit" value="search">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div></form>  
+                                
                             </div>
                         </div>
                     </div>
