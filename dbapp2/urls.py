@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.urls import path
 from dbapp2 import views
+from Shotel import views
 from . import views
 app_name='home'
 urlpatterns=[path('',views.home,name="hom" ),
@@ -10,6 +11,8 @@ urlpatterns=[path('',views.home,name="hom" ),
     path('hotel', views.hotel,name='hotel'),
     path('index', views.index,name='index'),
     path('train', views.train,name='train'),
+    
+    path('Shotel/dbapp2/Train', views.train,name='train'),
     path('train1', views.train1,name='train1'),
     path('logout', views.logout,name='logout'),
     path('addR/',views.addR,name="addR"),

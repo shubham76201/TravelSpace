@@ -1,20 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
-* {
-	box-sizing: border-box;
-}
-
-.body1 {
-	background: #f6f5f7;
-	display: block;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	font-family: 'Montserrat', sans-serif;
-	height: 100vh;
-	margin-left: 100px;
-}
 
 h1 {
 	font-weight: bold;
@@ -71,7 +57,7 @@ button.ghost {
 }
 
 form {
-	background-color: #FFFFFF;
+	background-color: #1b8eb1;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -90,9 +76,9 @@ input {
 }
 
 .container {
-	background-color: #fff;
+	background-color: rgb(30, 182, 156);
 	border-radius: 10px;
-  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+  	box-shadow: 0 14px 28px rgba(101, 143, 145, 0.25), 
 			0 10px 10px rgba(0,0,0,0.22);
 	position: relative;
 	overflow: hidden;
