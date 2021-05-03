@@ -1,102 +1,83 @@
+ {% extends 'base.html' %} {% block css %} {% load widget_tweaks %} {% load static %}
 
-{% extends 'base.html' %}
-{% block css %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap" rel="stylesheet"> {% endblock %} {% block title %} Hotel{% endblock title %} {% block tag1 %}
 
-    {% load widget_tweaks %}
-
-    
-    {% load static %}
-   
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap" rel="stylesheet">  
-        
-    
-{% endblock %}
-    
-{% block title %} Hotel{% endblock title %}
-{% block tag1 %}
-     
-     <a style="font-size:60%" href="/"><button class="btn btn-info">Home</button></a>
-     <a href="dbapp2/Train"><button class="btn btn-warning">Train Booking</button></a>
-     <a href="Bus"><button class="btn btn-danger">Bus Booking</button></a>
-     <a href=""><button class="btn btn-outline-primary"> Hi, {{request.user}}</button></a>{% endblock tag1 %}
-
-{% block content %}
+<a style="font-size:60%" href="/"><button class="btn btn-info">Home</button></a>
+<a href="dbapp2/Train"><button class="btn btn-warning">Train Booking</button></a>
+<a href=""><button class="btn btn-danger">Bus Booking</button></a>
+<a href=""><button class="btn btn-outline-primary"> Hi, {{request.user}}</button></a>{% endblock tag1 %} {% block content %}
 <div class="p-5 text-center bg-image" style="
             background-image: url('https://badianhotel.com/wp-content/uploads/2020/08/baglioni-hotel-london.jpg');
             height: 400px;
           ">
-            <div class="mask" style="background-color: rgba(0, 0, 0, 0.6); padding: 8px; border-radius: 8px;">
-                <div class="d-flex justify-content-center align-items-center h-100">
-                    <div class="text-white">
-                        <h1 class="mb-3">Search Review and Plan </h1>
-                     
-                        <a class="btn btn-outline-light btn-lg" href="#search" role="button">Get Started</a>
-                    </div>
-                </div>
+    <div class="mask" style="background-color: rgba(0, 0, 0, 0.6); padding: 8px; border-radius: 8px;">
+        <div class="d-flex justify-content-center align-items-center h-100">
+            <div class="text-white">
+                <h1 class="mb-3">Search Review and Plan </h1>
+
+                <a class="btn btn-outline-light btn-lg" href="#search" role="button">Get Started</a>
             </div>
-        </div>
-
-
-        <div class="container" >
-        <div class="col-md-20 well">
-            <h3 id="search" class="text-primary">Search Your Dezire Hotel</h3>
-            <hr  style="border-top:1px dotted #ccc;" />
-            <form method="get">
-        <div class="well">
-            <h4 style="margin-top: 0">Filter</h4>
-            <div class="row">
-                <div class="form-group col-sm-4 col-md-3" style="font-style: font-family: 'Ubuntu Condensed', sans-serif; ;">
-                    <label for="">Hotel <small>(Full Name)</small> </label>
-                    {% render_field filter.form.hname class="form-control" %}
-                </div>
-                <div class="form-group col-sm-4 col-md-3">
-                    {{ filter.form.city.label_tag }}
-                    {% render_field filter.form.city class="form-control" %}
-                </div>
-            </div>
-
-            <button type="submit" class="btn btn-primary">
-                <span class="glyphicon glyphicon-search"></span> Search
-            </button>
-        </div>
-        <br>
-    </form>
-
-    <table class="table table-bordered">
-        <thead>
-            <tr>
-
-                <th>Hotel Name</th>
-                <th>City </th>
-                <th>No of Beds available</th>
-                <th>Room Types Available</th>
-                <th>Updated On</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for user in filter.qs %}
-            <tr>
-
-                <td>{{ user.hname }}</td>
-                <td>{{ user.city }}</td>
-                <td>{{ user.nbeds }}</td>
-                <td>{{user.rooms}} </td>
-                <td>{{ user.updated_at }}</td>
-                <td><a class="btn btn-outline-success" href="/details/{{ user.id}} ">Info</a></td>
-            </tr>
-            {% empty %}
-            <tr>
-                <td colspan="5">No data</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-
-</body>
         </div>
     </div>
-    {% endblock content %}
+</div>
 
+
+<div class="container">
+    <div class="col-md-20 well">
+        <h3 id="search" class="text-primary">Search Your Dezire Hotel</h3>
+        <hr style="border-top:1px dotted #ccc;" />
+        <form method="get">
+            <div class="well">
+                <h4 style="margin-top: 0">Filter</h4>
+                <div class="row">
+                    <div class="form-group col-sm-4 col-md-3" style="font-style: font-family: 'Ubuntu Condensed', sans-serif; ;">
+                        <label for="">Hotel <small>(Full Name)</small> </label> {% render_field filter.form.hname class="form-control" %}
+                    </div>
+                    <div class="form-group col-sm-4 col-md-3">
+                        {{ filter.form.city.label_tag }} {% render_field filter.form.city class="form-control" %}
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                <span class="glyphicon glyphicon-search"></span> Search
+            </button>
+            </div>
+            <br>
+        </form>
+
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+
+                    <th>Hotel Name</th>
+                    <th>City </th>
+                    <th>No of Beds available</th>
+                    <th>Room Types Available</th>
+                    <th>Updated On</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for user in filter.qs %}
+                <tr>
+
+                    <td>{{ user.hname }}</td>
+                    <td>{{ user.city }}</td>
+                    <td>{{ user.nbeds }}</td>
+                    <td>{{user.rooms}} </td>
+                    <td>{{ user.updated_at }}</td>
+                    <td><a class="btn btn-outline-success" href="/details/{{ user.id}} ">Info</a></td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="5">No data</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        </body>
+    </div>
+</div>
+{% endblock content %}

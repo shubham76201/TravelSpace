@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'Shotel',
     'django_filters',
     'widget_tweaks',
+    'Bus',
     
 ]
 

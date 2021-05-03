@@ -27,6 +27,7 @@ urlpatterns = [
     path("",include('dbapp2.urls')),
     path("Shotel/",include('Shotel.urls')),
     path("dbapp2/",include('dbapp2.urls')),
+    path('Bus/', include('Bus.urls')),
     
     
 ]

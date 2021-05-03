@@ -12,8 +12,7 @@
     <!-- TITLE OF SITE -->
     <title>TravelSpace</title>
     <!-- favicon img -->
-    <link rel="shortcut icon" type="image/icon"
-        href="https://github.com/shubham76201/Sign_Up/blob/master/fav.png?raw=true" />
+    <link rel="shortcut icon" type="image/icon" href="https://github.com/shubham76201/Sign_Up/blob/master/fav.png?raw=true" />
 
     <!--font-awesome.min.css-->
     <link rel="stylesheet" href="{% static 'assets/css/font-awesome.min.css' %}" />
@@ -55,8 +54,7 @@
                     <div class="col-sm-10">
                         <div class="main-menu">
                             <div class="navbar-header">
-                                <button type="button" class="navbar-toggle" data-toggle="collapse"
-                                    data-target=".navbar-collapse">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                                     <i class="fa fa-bars"></i>
                                 </button>
                             </div>
@@ -74,6 +72,9 @@
                                     </li>
                                     <li>
                                         <a href="Shotel/user_list">Hotel</a>
+                                    </li>
+                                    <li>
+                                        <a href="Bus">Bus Booking</a>
                                     </li>
 
 
@@ -191,8 +192,7 @@
                                                     <h2>check in</h2>
                                                     <div class="travel-check-icon">
                                                         <form action="#">
-                                                            <input type="text" name="check_in" class="form-control"
-                                                                data-toggle="datepicker" placeholder="01 -03 - 2021 ">
+                                                            <input type="text" name="check_in" class="form-control" data-toggle="datepicker" placeholder="01 -03 - 2021 ">
                                                         </form>
                                                     </div>
                                                 </div>
@@ -202,8 +202,7 @@
                                                     <h2>check out</h2>
                                                     <div class="travel-check-icon">
                                                         <form action="#">
-                                                            <input type="text" name="check_out" class="form-control"
-                                                                data-toggle="datepicker" placeholder="02 -03 - 2021 ">
+                                                            <input type="text" name="check_out" class="form-control" data-toggle="datepicker" placeholder="02 -03 - 2021 ">
                                                         </form>
                                                     </div>
                                                 </div>
@@ -250,8 +249,7 @@
                                                                         <div id="slider-range"></div>
                                                                         <!--/.slider-range-->
                                                                         <div class="price_slider_amount">
-                                                                            <input type="text" id="amount" name="price"
-                                                                                placeholder="Add Your Price" />
+                                                                            <input type="text" id="amount" name="price" placeholder="Add Your Price" />
                                                                         </div>
                                                                         <!--/.price_slider_amount-->
                                                                     </div>
@@ -308,8 +306,7 @@
                                                     <h2>check in</h2>
                                                     <div class="travel-check-icon">
                                                         <form action="#">
-                                                            <input type="text" name="check_in" class="form-control"
-                                                                data-toggle="datepicker" placeholder="01 -03 - 2021 ">
+                                                            <input type="text" name="check_in" class="form-control" data-toggle="datepicker" placeholder="01 -03 - 2021 ">
                                                         </form>
                                                     </div>
                                                 </div>
@@ -319,8 +316,7 @@
                                                     <h2>check out</h2>
                                                     <div class="travel-check-icon">
                                                         <form action="#">
-                                                            <input type="text" name="check_out" class="form-control"
-                                                                data-toggle="datepicker" placeholder="02 -03 - 2021 ">
+                                                            <input type="text" name="check_out" class="form-control" data-toggle="datepicker" placeholder="02 -03 - 2021 ">
                                                         </form>
                                                     </div>
                                                 </div>
@@ -406,8 +402,7 @@
                                                     <h2>departure</h2>
                                                     <div class="travel-check-icon">
                                                         <form action="#">
-                                                            <input type="text" name="departure" class="form-control"
-                                                                data-toggle="datepicker" placeholder="02 -03 - 2021 ">
+                                                            <input type="text" name="departure" class="form-control" data-toggle="datepicker" placeholder="02 -03 - 2021 ">
                                                         </form>
                                                     </div>
                                                 </div>
@@ -417,8 +412,7 @@
                                                     <h2>return</h2>
                                                     <div class="travel-check-icon">
                                                         <form action="#">
-                                                            <input type="text" name="return" class="form-control"
-                                                                data-toggle="datepicker" placeholder="04 -03 - 2021 ">
+                                                            <input type="text" name="return" class="form-control" data-toggle="datepicker" placeholder="04 -03 - 2021 ">
                                                         </form>
                                                     </div>
                                                 </div>
@@ -488,21 +482,21 @@
                                         </div>
                                     </div>
                                 </div>
-                            
-                                <div role="tabpanel" class="tab-pane fade in" id="Trains">
-                                <form action="search/trains" method="POST" >
-                                    {% csrf_token %}
-                                    <div class="tab-para">
-                                        
-                                        <div class="trip-circle">
 
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-lg-4 col-md-4 col-sm-12">
-                                                <div class="single-tab-select-box">
-                                                    <h2>From</h2>
-                                                    <div class="travel-select-icon">
-                                                        <select class="form-control" name="from">
+                                <div role="tabpanel" class="tab-pane fade in" id="Trains">
+                                    <form action="search/trains" method="POST">
+                                        {% csrf_token %}
+                                        <div class="tab-para">
+
+                                            <div class="trip-circle">
+
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-4 col-md-4 col-sm-12">
+                                                    <div class="single-tab-select-box">
+                                                        <h2>From</h2>
+                                                        <div class="travel-select-icon">
+                                                            <select class="form-control" name="from">
                                                             <option value="" disabled selected>--Choose Your Source Place--</option>
                                                             <option value="Delhi">Delhi</option>
                                                             <option value="Mumbai">Mumbai</option>
@@ -515,22 +509,21 @@
                                                             <option value="Jaipur">Jaipur</option>
                                                             
                                                         </select>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-lg-2 col-md-3 col-sm-4">
-                                                <div class="single-tab-select-box">
-                                                    <h2>departure</h2>
-                                                    <div class="travel-check-icon">
-                                                        
-                                                     <input type="text" name="date" class="form-control"
-                                                                data-toggle="datepicker">
-                                                    
-                                                    </div>
-                                                </div>
-                                            </div>
+                                                <div class="col-lg-2 col-md-3 col-sm-4">
+                                                    <div class="single-tab-select-box">
+                                                        <h2>departure</h2>
+                                                        <div class="travel-check-icon">
 
-                                            <!-- <div class="col-lg-2 col-md-1 col-sm-4">
+                                                            <input type="text" name="date" class="form-control" data-toggle="datepicker">
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- <div class="col-lg-2 col-md-1 col-sm-4">
                                                 <div class="single-tab-select-box">
                                                     <h2>adults</h2>
                                                     <div class="travel-select-icon">
@@ -556,13 +549,13 @@
                                                     </div>
                                                 </div>
                                             </div> -->
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-lg-4 col-md-4 col-sm-12">
-                                                <div class="single-tab-select-box">
-                                                    <h2>to</h2>
-                                                    <div class="travel-select-icon">
-                                                        <select class="form-control " name="to">
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-4 col-md-4 col-sm-12">
+                                                    <div class="single-tab-select-box">
+                                                        <h2>to</h2>
+                                                        <div class="travel-select-icon">
+                                                            <select class="form-control " name="to">
                                                             <option value="Delhi" disabled selected>--Choose Your Dests
                                                                 Place--</option>
                                                             <option value="Delhi">Delhi</option>
@@ -575,34 +568,35 @@
                                                             <option value="Raipur">Raipur</option>
                                                             <option value="Jaipur">Jaipur</option>
                                                         </select>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <!-- <div class="col-lg-3 col-md-3 col-sm-4">
+                                                <!-- <div class="col-lg-3 col-md-3 col-sm-4">
                                                 <div class="single-tab-select-box">
                                                     <h2>class</h2>
                                                     <div class="travel-select-icon"> -->
-                                            <!-- <select class="form-control "> -->
-                                            <!-- <option value="default">enter class</option> -->
-                                            <!-- <!-- <option value="Economy">Economy</option> 
+                                                <!-- <select class="form-control "> -->
+                                                <!-- <option value="default">enter class</option> -->
+                                                <!-- <!-- <option value="Economy">Economy</option> 
                                                             <!-- <!-- <option value="First">First</option> -->
-                                            <!-- <!-- <option value="Business"> Business</option> -->
-                                            <!-- </select>
+                                                <!-- <!-- <option value="Business"> Business</option> -->
+                                                <!-- </select>
                                                     </div>
                                                 </div>
                                             </div> -->
-                                            <div class="clo-sm-5">
-                                                <div class="about-btn pull-right">
-                                                    <!-- <button class="about-view travel-btn">
+                                                <div class="clo-sm-5">
+                                                    <div class="about-btn pull-right">
+                                                        <!-- <button class="about-view travel-btn">
                                                         search
                                                     </button> -->
-                                                    <input class="about-view travel-btn" type="submit" value="search">
+                                                        <input class="about-view travel-btn" type="submit" value="search">
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div></form>  
-                                
+                                </div>
+                                </form>
+
                             </div>
                         </div>
                     </div>
@@ -642,8 +636,8 @@
                                     book top class hotel
                                 </a>
                             </h2>
-                            <p>We have tie-up with the best Hotels across the country to serve you the top class
-                                experiences.</p>
+                            <p>We have tie-up with the best Hotels across the country to serve you the top class experiences.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -805,8 +799,7 @@
                                 </div>
                                 <!--/.packages-review-->
                                 <div class="about-btn">
-                                    <form action="https://imjo.in/GcjeBt" target="_blank"> <button
-                                            class="about-view packages-btn">
+                                    <form action="https://imjo.in/GcjeBt" target="_blank"> <button class="about-view packages-btn">
                                             book now
                                         </button></form>
                                 </div>
@@ -851,8 +844,7 @@
                                 </div>
                                 <!--/.packages-review-->
                                 <div class="about-btn">
-                                    <form action="https://imjo.in/3HbvtF" target="_blank"><button
-                                            class="about-view packages-btn">
+                                    <form action="https://imjo.in/3HbvtF" target="_blank"><button class="about-view packages-btn">
                                             book now
                                         </button>
                                     </form>
@@ -1106,9 +1098,7 @@
                                         </span>
                                     </p>
                                     <p class="offer-para">
-                                        A kaleidoscopic blend of Indian and Portuguese cultures, sweetened with sun,
-                                        sea, sand, seafood, susegad and spirituality, Goa is India's pocket-sized
-                                        paradise.
+                                        A kaleidoscopic blend of Indian and Portuguese cultures, sweetened with sun, sea, sand, seafood, susegad and spirituality, Goa is India's pocket-sized paradise.
                                     </p>
                                 </div>
                                 <!--/.packages-para-->
@@ -1249,8 +1239,7 @@
             </div>
             <!--/.foot-icons-->
             <div id="scroll-Top">
-                <i class="fa fa-angle-double-up return-to-top" id="scroll-top" data-toggle="tooltip"
-                    data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
+                <i class="fa fa-angle-double-up return-to-top" id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
             </div>
             <!--/.scroll-Top-->
         </div>
@@ -1277,8 +1266,7 @@
     <!-- jquery.filterizr.min.js -->
     <script src="{% static 'assets/js/jquery.filterizr.min.js' %}"></script>
 
-    <script
-        src="{% static 'https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js' %}"></script>
 
     <!--jquery-ui.min.js-->
     <script src="{% static 'assets/js/jquery-ui.min.js' %}"></script>
